@@ -1,0 +1,8 @@
+Use Reducer
+    The useReducer hook is used to create a state (count) and a dispatch function (dispatch) that triggers the state updates. The state is then rendered in the component, and the dispatch function is used to update the state based on the specified actions.
+
+    By using useReducer, you can handle more complex state updates and keep the state transitions centralized within the reducer function, making it easier to understand and maintain your code.
+
+    Reducer Function: The reducer function is a pure function that takes the current state and an action as arguments and returns the new state. It follows the convention (state, action) => newState. The reducer function should not modify the existing state but instead create and return a new state object.
+
+    Dispatch function: The useReducer hook returns an array with two elements: the current state and a dispatch function. The dispatch function is used to trigger state updates by calling it with an action object. The action object typically has a type property that describes the type of action being performed. You can also include additional data in the action object, such as payload or parameters required for the state update.
