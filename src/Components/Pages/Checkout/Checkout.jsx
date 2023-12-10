@@ -4,7 +4,7 @@ import Subtotal from "../Subtotal/Subtotal";
 import CheckoutProduct from "./CheckoutProduct/CheckoutProduct";
 import { useStateValue } from "../../StateProvider/StateProvider";
 function Checkout() {
-	const [{ basket }, dispatch] = useStateValue();
+	const [{user, basket }, dispatch] = useStateValue();
 // to scroll the page to the top when mounted
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -18,7 +18,7 @@ function Checkout() {
 					src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
 					alt=""
 				/>
-				<h3>Hello</h3>
+				<h3>Hello { !user?'Guest':user.email}</h3>
 				<h2 className="checkout__title">Your Shopping Basket</h2>
 				{basket.map((item,i) => (
 					<CheckoutProduct key={i} id={item.id} title={item.title} image={item.image} price={item.price} rating={item.rating} />

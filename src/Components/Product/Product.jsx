@@ -20,7 +20,7 @@ function Product({ id, title, image, price, rating }) {
 		setIsAdded(true);
 		setTimeout(() => {
 			setIsAdded(false);
-		}, 2000);
+		}, 1000);
 }	
 	return (
 		<div key={id} className="product">

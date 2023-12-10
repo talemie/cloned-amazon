@@ -1,32 +1,32 @@
-import React from 'react'
-import './home.css'
-import Product from '../Product/Product';
+import React from "react";
+import "./home.css";
+import Product from "../Product/Product";
 function Home() {
 	// product images destructured here
-    const [
-			image1,
-			image2,
-			image3,
-			image4,
-			image5,
-			image6,
-			image7,
-			image8,
-			image9,
-			image10,
-		] = [
-			"https://m.media-amazon.com/images/I/71K6YQEI5RL._AC_UL320_.jpg",
-			"https://m.media-amazon.com/images/I/51IFiSD+kCL._AC_SY200_.jpg",
-			"https://m.media-amazon.com/images/I/71DDA+p+QqL._AC_UY218_.jpg",
-			"https://m.media-amazon.com/images/I/51XLf5D0neL._AC_UY218_.jpg",
-			"https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_UY218_.jpg",
-			"https://m.media-amazon.com/images/I/81ds-A08OxL._AC_UL320_.jpg",
-			"https://m.media-amazon.com/images/I/819zf0AMM2L._AC_UL320_.jpg",
-			"https://m.media-amazon.com/images/I/71UhMysaqzL._AC_UL320_.jpg",
-			"https://m.media-amazon.com/images/I/71MvpgJdBoL._AC_UL320_.jpg",
-			"https://m.media-amazon.com/images/I/81y8zGlpJWL._AC_UL320_.jpg",
-		];
-  return (
+	const [
+		image1,
+		image2,
+		image3,
+		image4,
+		image5,
+		image6,
+		image7,
+		image8,
+		image9,
+		image10,
+	] = [
+		"https://m.media-amazon.com/images/I/71K6YQEI5RL._AC_UL320_.jpg",
+		"https://m.media-amazon.com/images/I/51IFiSD+kCL._AC_SY200_.jpg",
+		"https://m.media-amazon.com/images/I/71DDA+p+QqL._AC_UY218_.jpg",
+		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61idku5S0OL._AC_UY218_.jpg",
+		"https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_UY218_.jpg",
+		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/81gf+wgrcfS._AC_SL1500_.jpg",
+		"https://m.media-amazon.com/images/I/819zf0AMM2L._AC_UL320_.jpg",
+		"https://m.media-amazon.com/images/I/71UhMysaqzL._AC_UL320_.jpg",
+		"https://m.media-amazon.com/images/I/71MvpgJdBoL._AC_UL320_.jpg",
+		"https://m.media-amazon.com/images/I/81y8zGlpJWL._AC_UL320_.jpg",
+	];
+	return (
 		<div className="home">
 			<div className="home__container">
 				<img
@@ -60,7 +60,7 @@ function Home() {
 					/>
 					<Product
 						id={4}
-						title="AirPods Pro Wireless Earbuds Bluetooth in Ear Light-Weight Headphones Built-in Microphone, with Touch Control"
+						title="Wireless Earbuds Bluetooth Headphones 60H Playtime Ear Buds with LED Power Display Charging Case Earphones in-Ear Earbud ..."
 						image={image4}
 						price={199.99}
 						rating={3}
@@ -76,7 +76,7 @@ function Home() {
 				<div className="home__row">
 					<Product
 						id={6}
-						title="SUPERJARE TV Stand for 55 Inch TV, Entertainment Center with Adjustable Shelf, for Living Room, Bedroom, Rustic Brown"
+						title="SAMSUNG 49 Odyssey Neo G9 Series G95NA 4K UHD Curved Gaming Monitor, 240Hz, 1ms, Mini LED Display, G-Sync and FreeSync Premium Pro, LS49AG952NNXZA,..."
 						image={image6}
 						price={1119.99}
 						rating={5}
@@ -117,4 +117,4 @@ function Home() {
 	);
 }
 
-export default Home
+export default Home;
