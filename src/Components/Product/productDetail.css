@@ -1,0 +1,10 @@
+.product_detail{
+    display: flex;
+    margin: 0 auto;
+}
+.pro_fetched{
+    width: 50% !important;
+}
+.loading_detail{
+    margin-left: 40px;
+}
