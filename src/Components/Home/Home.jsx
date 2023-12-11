@@ -36,7 +36,7 @@ function Home() {
 		"https://images-na.ssl-images-amazon.com/images/I/61re+ymFgcL._AC_UL160_SR160,160_.jpg",
 		"https://images-na.ssl-images-amazon.com/images/I/81vxbNpc14L._AC_UL160_SR160,160_.jpg",
 		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/41L-kH-Q3mL._AC_SY879_.jpg",
-		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/81rSvKs5q4L._AC_SL1500_.jpg",
+		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61oVYpKCOIL._AC_UF894,1000_QL80_FMwebp_.jpg",
 		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/719hcFL5ZJL._AC_SL1500_.jpg",
 	];
 	return (
@@ -166,7 +166,7 @@ function Home() {
 						id={15}
 						title="LG 27 Ultragear™ OLED QHD Gaming Monitor with 240Hz .03ms GtG & nVIDIA® G-SYNC® Compatible,Black "
 						image={image15}
-						price={219.99}
+						price={2119.99}
 						rating={2}
 						isSmall
 					/>

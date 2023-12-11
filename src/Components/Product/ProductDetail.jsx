@@ -19,8 +19,8 @@ function ProductDetail() {
 	// console.log("TEST BASKET", product);
 	// console.log("Fetched product", productFetched);
 	return (
-		<div>
-            <h1>Product detail</h1>
+		<div className="addional_view">
+            <h1 className="title">Product detail</h1>
             <div className="product_detail">
                 {productFetched.map((item, i) => (
 				<Product className='pro_fetched'
