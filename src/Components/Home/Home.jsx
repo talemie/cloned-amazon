@@ -112,6 +112,137 @@ function Home() {
 						rating={4}
 					/>
 				</div>
+				{/* for small products--scrollable */}
+				<div className="home__rowSmall">
+					<Product
+						id={7}
+						title="Sakugi Dish "
+						image={image7}
+						price={219.99}
+						rating={2}
+						isSmall
+					/>
+					<Product
+						id={8}
+						title="KEEMAKE Chef Knife "
+						image={image8}
+						price={199.99}
+						rating={3}
+						isSmall
+					/>
+					<Product
+						id={9}
+						title="Owala FreeSip "
+						image={image9}
+						price={49.99}
+						rating={4}
+						isSmall
+					/>
+					<Product
+						id={10}
+						title="Electric Salt "
+						image={image10}
+						price={49.99}
+						rating={4}
+						isSmall
+					/>
+					<Product
+						id={11}
+						title="Sakugi Dish Drying Rack "
+						image={image7}
+						price={219.99}
+						rating={2}
+						isSmall
+					/>
+					<Product
+						id={12}
+						title="KEEMAKE Chef Knife 8 inch"
+						image={image8}
+						price={199.99}
+						rating={3}
+						isSmall
+					/>
+					<Product
+						id={13}
+						title="Owala FreeSip "
+						image={image9}
+						price={49.99}
+						rating={4}
+						isSmall
+					/>
+					<Product
+						id={14}
+						title="Electric Salt  "
+						image={image10}
+						price={49.99}
+						rating={4}
+						isSmall
+					/>
+					<Product
+						id={7}
+						title="Sakugi Dish "
+						image={image7}
+						price={219.99}
+						rating={2}
+						isSmall
+					/>
+					<Product
+						id={8}
+						title="KEEMAKE Chef Knife "
+						image={image8}
+						price={199.99}
+						rating={3}
+						isSmall
+					/>
+					<Product
+						id={9}
+						title="Owala FreeSip "
+						image={image9}
+						price={49.99}
+						rating={4}
+						isSmall
+					/>
+					<Product
+						id={10}
+						title="Electric Salt "
+						image={image10}
+						price={49.99}
+						rating={4}
+						isSmall
+					/>
+					<Product
+						id={11}
+						title="Sakugi Dish Drying Rack "
+						image={image7}
+						price={219.99}
+						rating={2}
+						isSmall
+					/>
+					<Product
+						id={12}
+						title="KEEMAKE Chef Knife 8 inch"
+						image={image8}
+						price={199.99}
+						rating={3}
+						isSmall
+					/>
+					<Product
+						id={13}
+						title="Owala FreeSip "
+						image={image9}
+						price={49.99}
+						rating={4}
+						isSmall
+					/>
+					<Product
+						id={14}
+						title="Electric Salt  "
+						image={image10}
+						price={49.99}
+						rating={4}
+						isSmall
+					/>
+				</div>
 			</div>
 		</div>
 	);

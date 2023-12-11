@@ -15,10 +15,19 @@
 }
 .home__row {
 	display: flex;
-	z-index: 1;
+	/* z-index: 1; */
 	margin-left: 5px;
 	margin-right: 5px;
 }
 .home__row__container {
 	margin-top: -20%;
+}
+.home__rowSmall{
+	 display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+.home__rowSmall::-webkit-scrollbar{
+    display: none;
 }

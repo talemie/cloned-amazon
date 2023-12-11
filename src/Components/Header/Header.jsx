@@ -23,7 +23,11 @@ function Header() {
 			</Link>
 
 			<div className="header__search">
-				<input className="header__searchInput" type="text" placeholder="This website is only for training purpose. Not Official !!!"/>
+				<input
+					className="header__searchInput"
+					type="text"
+					placeholder="This website is Not Official !!! Just for only training purpose. "
+				/>
 				<SearchIcon className="header__searchIcon" />
 			</div>
 			<div className="header__nav">
