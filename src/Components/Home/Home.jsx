@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css";
 import Product from "../Product/Product";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import { productList } from "../../CommonResources/prodcutList";
 function Home() {
 	// product images destructured here
 	const [
@@ -14,13 +15,7 @@ function Home() {
 		image7,
 		image8,
 		image9,
-		image10,
-		image11,
-		image12,
-		image13,
-		image14,
-		image15,
-		image16,
+		image10
 	] = [
 		"https://m.media-amazon.com/images/I/71K6YQEI5RL._AC_UL320_.jpg",
 		"https://m.media-amazon.com/images/I/51IFiSD+kCL._AC_SY200_.jpg",
@@ -32,12 +27,6 @@ function Home() {
 		"https://m.media-amazon.com/images/I/71UhMysaqzL._AC_UL320_.jpg",
 		"https://m.media-amazon.com/images/I/71MvpgJdBoL._AC_UL320_.jpg",
 		"https://m.media-amazon.com/images/I/81y8zGlpJWL._AC_UL320_.jpg",
-		"https://images-na.ssl-images-amazon.com/images/I/619CPKLr92L._AC_UL160_SR160,160_.jpg",
-		"https://images-na.ssl-images-amazon.com/images/I/61re+ymFgcL._AC_UL160_SR160,160_.jpg",
-		"https://images-na.ssl-images-amazon.com/images/I/81vxbNpc14L._AC_UL160_SR160,160_.jpg",
-		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/41L-kH-Q3mL._AC_SY879_.jpg",
-		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61oVYpKCOIL._AC_UF894,1000_QL80_FMwebp_.jpg",
-		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/719hcFL5ZJL._AC_SL1500_.jpg",
 	];
 	return (
 		<div className="home">
@@ -130,134 +119,17 @@ function Home() {
 					Customers who viewed items in your browsing history also viewed
 				</h3>
 				<div className="home__rowSmall">
-					<Product
-						id={11}
-						title="KitchenAid KFP1333GC 13-Cup Food Processor with ExactSlice System - Gloss Cinnamon (Renewed) "
-						image={image11}
-						price={199.99}
-						rating={2}
-						isSmall
-					/>
-					<Product
-						id={12}
-						title="Akkerds Case Compatible with iPad 10.2 Inch 2021/2020 iPad 9th/8th Generation & 2019 iPad 7th Generation with Pencil Holder, Protective Case with Soft TPU Back, Auto Sleep/Wake Cover, Sky Blue "
-						image={image12}
-						price={10.99}
-						rating={3}
-						isSmall
-					/>
-					<Product
-						id={13}
-						title="Retro TV Stand with Storage for TVs up to 55 In, Rustic Brown TV Stand for Media, Mid Century Modern TV Stand & Entertainment Center with Shlef，Wood TV Console Table for Living Room Bedroom, APRTS01 "
-						image={image13}
-						price={99.99}
-						rating={4}
-						isSmall
-					/>
-					<Product
-						id={14}
-						title="Owala Harry Potter FreeSip Insulated Stainless Steel Water Bottle with Straw, BPA-Free Sports Water Bottle, Great for Travel, 24 Oz, Ravenclaw "
-						image={image14}
-						price={27.99}
-						rating={4}
-						isSmall
-					/>
-					<Product
-						id={15}
-						title="LG 27 Ultragear™ OLED QHD Gaming Monitor with 240Hz .03ms GtG & nVIDIA® G-SYNC® Compatible,Black "
-						image={image15}
-						price={2119.99}
-						rating={2}
-						isSmall
-					/>
-					<Product
-						id={16}
-						title="Hamilton Beach Stack & Snap Food Processor and Vegetable Chopper, BPA Free, Stainless Steel Blades, 14 Cup + 4-Cup Mini Bowls, 3-Speed 500 Watt Motor, Black (70585)"
-						image={image16}
-						price={199.99}
-						rating={3}
-						isSmall
-					/>
-					<Product
-						id={13}
-						title="Owala FreeSip "
-						image={image9}
-						price={49.99}
-						rating={4}
-						isSmall
-					/>
-					<Product
-						id={14}
-						title="Electric Salt  "
-						image={image10}
-						price={49.99}
-						rating={4}
-						isSmall
-					/>
-					<Product
-						id={7}
-						title="Sakugi Dish "
-						image={image7}
-						price={219.99}
-						rating={2}
-						isSmall
-					/>
-					<Product
-						id={8}
-						title="KEEMAKE Chef Knife "
-						image={image8}
-						price={199.99}
-						rating={3}
-						isSmall
-					/>
-					<Product
-						id={9}
-						title="Owala FreeSip "
-						image={image9}
-						price={49.99}
-						rating={4}
-						isSmall
-					/>
-					<Product
-						id={10}
-						title="Electric Salt "
-						image={image10}
-						price={49.99}
-						rating={4}
-						isSmall
-					/>
-					<Product
-						id={11}
-						title="Sakugi Dish Drying Rack "
-						image={image7}
-						price={219.99}
-						rating={2}
-						isSmall
-					/>
-					<Product
-						id={12}
-						title="KEEMAKE Chef Knife 8 inch"
-						image={image8}
-						price={199.99}
-						rating={3}
-						isSmall
-					/>
-					<Product
-						id={13}
-						title="Owala FreeSip "
-						image={image9}
-						price={49.99}
-						rating={4}
-						isSmall
-					/>
-					<Product
-						id={14}
-						title="Electric Salt  "
-						image={image10}
-						price={49.99}
-						rating={4}
-						isSmall
-					/>
+					{productList?.map((item, i) => (
+						<Product
+							key={i}
+							id={item.id}
+							title={item.title}
+							image={item.image}
+							price={item.price}
+							rating={item.rating}
+							isSmall
+						/>
+					))}
 				</div>
 			</div>
 		</div>
