@@ -20,20 +20,35 @@ function ProductDetail() {
 	// console.log("Fetched product", productFetched);
 	return (
 		<div className="addional_view">
-            <h1 className="title">Product detail</h1>
-            <div className="product_detail">
-                {productFetched.map((item, i) => (
-				<Product className='pro_fetched'
-					id={item.id}
-					title={item.title}
-					price={item.price}
-					image={item.image}
-					rating={item.rating}
-				/>
-                ))}
-                <div className="loading_detail"><h2>Project detail loading...</h2></div>
-            </div>
-			
+			<h1 className="title">Product detail</h1>
+			<div className="product_detail">
+				{productFetched.map((item, i) => (
+					<Product
+						className="pro_fetched"
+						id={item.id}
+						title={item.title}
+						price={item.price}
+						image={item.image}
+						rating={item.rating}
+					/>
+				))}
+				<div className="loading_detail">
+					<img
+						src="https://m.media-amazon.com/images/G/01/marketing/prime/new_prime_logo_RGB_blue._CB426090081_.png"
+						alt=""
+					/>
+					<div className="prime__note">
+						<p>
+							Enjoy fast,free delivery,exclusive deals,and award-winning
+							movies&TV shows with prime
+						</p>
+						<p>
+							<span>Try Prime</span> and start saving today with fast,free
+							delivery
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 }
