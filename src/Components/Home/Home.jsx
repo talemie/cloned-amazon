@@ -1,6 +1,8 @@
 import React from "react";
 import "./home.css";
 import Product from "../Product/Product";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import { productList } from "../../CommonResources/prodcutList";
 function Home() {
 	// product images destructured here
 	const [
@@ -13,7 +15,7 @@ function Home() {
 		image7,
 		image8,
 		image9,
-		image10,
+		image10
 	] = [
 		"https://m.media-amazon.com/images/I/71K6YQEI5RL._AC_UL320_.jpg",
 		"https://m.media-amazon.com/images/I/51IFiSD+kCL._AC_SY200_.jpg",
@@ -111,6 +113,23 @@ function Home() {
 						price={49.99}
 						rating={4}
 					/>
+				</div>
+				{/* for small products--scrollable */}
+				<h3 className="view_more">
+					Customers who viewed items in your browsing history also viewed
+				</h3>
+				<div className="home__rowSmall">
+					{productList?.map((item, i) => (
+						<Product
+							key={i}
+							id={item.id}
+							title={item.title}
+							image={item.image}
+							price={item.price}
+							rating={item.rating}
+							isSmall
+						/>
+					))}
 				</div>
 			</div>
 		</div>

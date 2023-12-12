@@ -1,0 +1,33 @@
+.addional_view{
+    /* margin-top: 20px; */
+    max-width: 80%;
+    margin: 20px auto 0;
+}
+.title{
+    margin-left: 100px;
+    padding-bottom: 20px;
+}
+.product_detail{
+    display: flex;
+    margin: 0 auto;
+}
+.pro_fetched{
+    width: 50% !important;
+}
+.loading_detail{
+    margin: 40px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 20px;
+    max-height: 200px;
+}
+.loading_detail img{
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+.prime__note p{
+    padding: 3px;
+}
+.prime__note span{
+    color: blue;
+}
