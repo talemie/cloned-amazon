@@ -52,3 +52,7 @@ const reducer = (state, action) => {
 		}
 }
 export default reducer
+
+// create a function to calculate the basket price
+export const getBasketTotal = (basket) =>
+	basket?.reduce((amount, item) => item.price + amount, 0);
