@@ -120,7 +120,7 @@ function Home() {
 				</h3>
 				<div className="home__rowSmall">
 					{productList?.map((item, i) => (
-						<Product
+						<Product className='bottom__product'
 							key={i}
 							id={item.id}
 							title={item.title}
