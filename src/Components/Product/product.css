@@ -63,6 +63,9 @@
     box-shadow: 0 6px 18px -9px rgba(0, 0, 0, 0.75);
     transition: transform 0.1s ease-in;
 }
+.small__product:hover{
+cursor: pointer;
+}
 .small__product  img {
     max-height: 200px;
     width: 100%;
