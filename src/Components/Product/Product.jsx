@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./product.css";
 import { useStateValue } from "../StateProvider/StateProvider";
 import { useNavigate } from "react-router-dom";
-function Product({ id, title, image, price, rating, isSmall }) {
+function Product({ id, title, image, price, rating, isSmall, quantity }) {
 	const [{ basket }, dispatch] = useStateValue();
 	const [isAdded, setIsAdded] = useState(false);
 	const navigate = useNavigate();
@@ -16,6 +16,7 @@ function Product({ id, title, image, price, rating, isSmall }) {
 				price: price,
 				image: image,
 				rating: rating,
+				quantity: quantity,
 			},
 		});
 		// showing the product added msg
@@ -35,6 +36,7 @@ function Product({ id, title, image, price, rating, isSmall }) {
 				price: price,
 				image: image,
 				rating: rating,
+				quantity: quantity,
 			},
 		});
 	};
@@ -43,21 +45,23 @@ function Product({ id, title, image, price, rating, isSmall }) {
 			className={!isSmall ? "product" : "small__product"}
 			onClick={isSmall && showDetail}
 		>
-			{!isSmall &&<div className="product__info">
-				<p>{title}</p>
-				<p className="product__price">
-					<small>$</small>
-					<strong>{price}</strong>
-				</p>
-				<div className="product__rating">
-					{Array(rating)
-						.fill()
-						.map((item, i) => (
-							<p key={i}>💛</p>
-						))}
+			{!isSmall && (
+				<div className="product__info">
+					<p>{title}</p>
+					<p className="product__price">
+						<small>$</small>
+						<strong>{price}</strong>
+					</p>
+					<div className="product__rating">
+						{Array(rating)
+							.fill()
+							.map((item, i) => (
+								<p key={i}>💛</p>
+							))}
+					</div>
 				</div>
-			</div>}
-			
+			)}
+
 			<div>
 				<img src={image} alt="" />
 			</div>

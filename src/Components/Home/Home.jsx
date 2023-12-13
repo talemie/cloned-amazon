@@ -15,7 +15,7 @@ function Home() {
 		image7,
 		image8,
 		image9,
-		image10
+		image10,
 	] = [
 		"https://m.media-amazon.com/images/I/71K6YQEI5RL._AC_UL320_.jpg",
 		"https://m.media-amazon.com/images/I/51IFiSD+kCL._AC_SY200_.jpg",
@@ -43,6 +43,7 @@ function Home() {
 						image={image1}
 						price={26.99}
 						rating={5}
+						quantity={1}
 					/>
 					<Product
 						id={2}
@@ -50,6 +51,7 @@ function Home() {
 						image={image2}
 						price={89.99}
 						rating={4}
+						quantity={1}
 					/>
 				</div>
 				<div className="home__row">
@@ -59,6 +61,7 @@ function Home() {
 						image={image3}
 						price={219.99}
 						rating={2}
+						quantity={1}
 					/>
 					<Product
 						id={4}
@@ -66,6 +69,7 @@ function Home() {
 						image={image4}
 						price={199.99}
 						rating={3}
+						quantity={1}
 					/>
 					<Product
 						id={5}
@@ -73,6 +77,7 @@ function Home() {
 						image={image5}
 						price={49.99}
 						rating={4}
+						quantity={1}
 					/>
 				</div>
 				<div className="home__row">
@@ -82,6 +87,7 @@ function Home() {
 						image={image6}
 						price={1119.99}
 						rating={5}
+						quantity={1}
 					/>
 				</div>
 				<div className="home__row">
@@ -91,6 +97,7 @@ function Home() {
 						image={image7}
 						price={219.99}
 						rating={2}
+						quantity={1}
 					/>
 					<Product
 						id={8}
@@ -98,6 +105,7 @@ function Home() {
 						image={image8}
 						price={199.99}
 						rating={3}
+						quantity={1}
 					/>
 					<Product
 						id={9}
@@ -105,6 +113,7 @@ function Home() {
 						image={image9}
 						price={49.99}
 						rating={4}
+						quantity={1}
 					/>
 					<Product
 						id={10}
@@ -112,6 +121,7 @@ function Home() {
 						image={image10}
 						price={49.99}
 						rating={4}
+						quantity={1}
 					/>
 				</div>
 				{/* for small products--scrollable */}
@@ -120,13 +130,15 @@ function Home() {
 				</h3>
 				<div className="home__rowSmall">
 					{productList?.map((item, i) => (
-						<Product className='bottom__product'
+						<Product
+							className="bottom__product"
 							key={i}
 							id={item.id}
 							title={item.title}
 							image={item.image}
 							price={item.price}
 							rating={item.rating}
+							quantity={item.quantity}
 							isSmall
 						/>
 					))}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useStateValue } from "../StateProvider/StateProvider";
 import Product from "./Product";
-import './productDetail.css'
+import "./productDetail.css";
 
 function ProductDetail() {
 	const [{ basket, product }, dispatch] = useStateValue();
@@ -30,6 +30,7 @@ function ProductDetail() {
 						price={item.price}
 						image={item.image}
 						rating={item.rating}
+						quantity={item.quantity}
 					/>
 				))}
 				<div className="loading_detail">

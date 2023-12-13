@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./checkoutProduct.css";
 import { useStateValue } from "../../../StateProvider/StateProvider";
-function CheckoutProduct({ id, title, image, price, rating }) {
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+function CheckoutProduct({ id, title, image, price, rating,quantity}) {
 	const [{ basket }, dispatch] = useStateValue();
+	
 
 	// remove from basket function
 	const removeFromBasket = () => {
@@ -10,6 +13,22 @@ function CheckoutProduct({ id, title, image, price, rating }) {
 			type: "REMOVE_FROM_BASKET",
 			id: id,
 		});
+	};
+	// plus/minus product functionality
+
+	const addMore = () => {
+		dispatch({
+			type: "DUPLICATE_PRODUCT",
+			id: id,
+		});
+		
+	};
+	const remove = () => {
+		dispatch({
+			type: "MINUS_PRODUCT",
+			id: id,
+		});
+		
 	};
 	return (
 		<div className="checkoutProduct">
@@ -23,9 +42,13 @@ function CheckoutProduct({ id, title, image, price, rating }) {
 				<div className="checkoutProduct__rating">
 					{Array(rating)
 						.fill()
-						.map(() => (
-							<p>💛</p>
+						.map((item,i) => (
+							<p key={i}>💛</p>
 						))}
+				</div>
+				<div className="product__quantity">
+					Qty. <span>{quantity}</span> <AddIcon onClick={addMore} />
+					<RemoveIcon onClick={remove} />
 				</div>
 				<button onClick={removeFromBasket}>Remove from Basket</button>
 			</div>
