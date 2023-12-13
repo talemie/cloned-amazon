@@ -18,14 +18,14 @@ function CheckoutProduct({ id, title, image, price, rating,quantity}) {
 
 	const addMore = () => {
 		dispatch({
-			type: "DUPLICATE_PRODUCT",
+			type: "PLUS_QUANTITY",
 			id: id,
 		});
 		
 	};
 	const remove = () => {
 		dispatch({
-			type: "MINUS_PRODUCT",
+			type: "MINUS_QUANTITY",
 			id: id,
 		});
 		
@@ -47,7 +47,8 @@ function CheckoutProduct({ id, title, image, price, rating,quantity}) {
 						))}
 				</div>
 				<div className="product__quantity">
-					Qty. <span>{quantity}</span> <AddIcon onClick={addMore} />
+					<h5>Qty. <span>{quantity}</span></h5>
+					<AddIcon onClick={addMore} />
 					<RemoveIcon onClick={remove} />
 				</div>
 				<button onClick={removeFromBasket}>Remove from Basket</button>

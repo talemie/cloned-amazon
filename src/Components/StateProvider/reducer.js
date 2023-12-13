@@ -10,11 +10,39 @@ const reducer = (state, action) => {
 	// console.log(action);
 	switch (action.type) {
 		case "ADD_TO_BASKET":
+			const isInCart = state.basket.some((item) => item.id === action.item.id);
+			if (isInCart) {
+				// update existing item in cart
+				return {
+					...state,
+					basket: state.basket.map((item) =>
+						item.id === action.item.id
+							? {
+									...item,
+									quantity: item.quantity + 1,
+							  }
+							: item
+					),
+				};
+			}
+			// add net item to cart
 			return {
 				...state,
-				basket: [...state.basket, action.item],
-				quantity:state.quantity+1
+				basket: [
+					...state.basket,
+					{
+						...action.item,
+						quantity: 1,
+					},
+				],
 			};
+
+		// old functionality
+		// return {
+		// 	...state,
+		// 	basket: [...state.basket, action.item],
+
+		// };
 		case "REMOVE_FROM_BASKET":
 			const index = state.basket.findIndex(
 				(basketItem) => basketItem.id === action.id
@@ -48,21 +76,43 @@ const reducer = (state, action) => {
 				...state,
 				product: [],
 			};
-		
+
 		// add/minus product Qty feature
-		case "DUPLICATE_PRODUCT":
+		case "PLUS_QUANTITY":
 			// if (state.) {
-				
+
 			// }
 			return {
 				...state,
-				quantity: state.quantity + 1,
+				basket: state.basket.map((item) =>
+					item.id === action.id
+						? {
+								...item,
+								quantity: item.quantity + 1,
+						  }
+						: item
+				),
 			};
-		case "MINUS_PRODUCT":
+		case "MINUS_QUANTITY":
+			const item = state.basket.find((item) => item.id === action.id);
+			if (item?.quantity===1) {
+				// new quantity is 0,remove item from cart
+				return {
+					...state,
+					basket: state.basket.filter(item=>item.id!==action.id)
+				};
+			}
+		// decrement quantity
 			return {
 				...state,
-				quantity: state.quantity - 1,
-			};
+				basket: state.basket.map(
+					item => item.id === action.id ? {
+						...item,
+						quantity:item.quantity-1
+					}:item
+				)
+			}
+			
 		default:
 			return state;
 	}
@@ -71,4 +121,4 @@ export default reducer;
 
 // create a function to calculate the basket price
 export const getBasketTotal = (basket) =>
-	basket?.reduce((amount, item) => item.price*item.quantity + amount, 0);
+	basket?.reduce((amount, item) => item.price * item.quantity + amount, 0);
