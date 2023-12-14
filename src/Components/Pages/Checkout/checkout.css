@@ -18,6 +18,9 @@
 .product__quantity{
 	margin-top: 30px;
 }
+.product__quantity>h5{
+	padding: 10px;
+}
 .qty__icons{
 	border: 1px solid gray;
 	border-radius: 5px;

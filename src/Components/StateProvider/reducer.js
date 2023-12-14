@@ -127,6 +127,7 @@ export default reducer;
 // create a function to calculate the basket price
 export const getBasketTotal = (basket) =>
 	basket?.reduce((amount, item) => item.price * item.quantity + amount, 0);
+	
 // basket size calculation
 
 export const getBasketSize = (basket) =>

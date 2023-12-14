@@ -23,7 +23,7 @@ function Product({ id, title, image, price, rating, isSmall, quantity }) {
 		setIsAdded(true);
 		setTimeout(() => {
 			setIsAdded(false);
-		}, 1000);
+		}, 300);
 	};
 	// show product detail function
 	const showDetail = () => {
@@ -66,13 +66,13 @@ function Product({ id, title, image, price, rating, isSmall, quantity }) {
 				<img src={image} alt="" />
 			</div>
 			<div>
-				{!isSmall && <button onClick={addToBasket}>Add to Cart</button>}
-
 				{isAdded && (
 					<h5 className="product__alert">
 						<em>Product added!!</em>
 					</h5>
 				)}
+				{!isSmall && <button onClick={addToBasket}>Add to Cart</button>}
+
 			</div>
 		</div>
 	);

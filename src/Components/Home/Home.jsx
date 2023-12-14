@@ -103,7 +103,7 @@ function Home() {
 						id={8}
 						title="KEEMAKE Chef Knife 8 inch, Kitchen Knife with Japanese 440C..."
 						image={image8}
-						price={199.99}
+						price={29.99}
 						rating={3}
 						quantity={1}
 					/>

@@ -5,7 +5,7 @@ import { useStateValue } from "../../StateProvider/StateProvider";
 import CheckoutProduct from "../Checkout/CheckoutProduct/CheckoutProduct";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
-import { getBasketTotal } from "../../StateProvider/reducer";
+import { getBasketSize, getBasketTotal } from "../../StateProvider/reducer";
 import axios from '../../../CommonResources/axios.js'
 
 
@@ -62,7 +62,7 @@ function Payment() {
 		<div className="payment">
 			<div className="payment__container">
 				<h1>
-					Checkout {<Link to={"/checkout"}>({basket?.length} items) </Link>}
+					Checkout {<Link to={"/checkout"}>({getBasketSize(basket)} items) </Link>}
 				</h1>
 				<div className="payment__section">
 					<div className="payment__title">
@@ -88,6 +88,7 @@ function Payment() {
 								price={item.price}
 								image={item.image}
 								rating={item.rating}
+								quantity={item.quantity}
 							/>
 						))}
 					</div>
