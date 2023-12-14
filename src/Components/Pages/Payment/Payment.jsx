@@ -10,7 +10,7 @@ import axios from '../../../CommonResources/axios.js'
 
 
 function Payment() {
-	const [{ basket, user }] = useStateValue()
+	const [{ basket, user }, dispatch] = useStateValue();
 	const stripe = useStripe()
 	const elements = useElements()
 	const navigate = useNavigate();
@@ -40,7 +40,7 @@ function Payment() {
 		}
 		getClientSecret();
 	}, [basket])
-	console.log(`The client secret is>>>> ${clientSecret}`);
+	
 
 	const handleSubmit = async (event) => {
 		event.preventDefault()
@@ -55,6 +55,10 @@ function Payment() {
 			setSucceeded(true)
 			setError(null)
 			setProcessing(false)
+
+			dispatch({
+				type: "EMPTY_BASKET",
+			});
 
 			navigate('/orders')
 		}).catch((error)=>console.log(error.message))
