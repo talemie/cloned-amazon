@@ -27,8 +27,30 @@
 
 .checkoutProduct__rating {
     display: flex;
+    margin-top: 10px;
 }
 .checkoutProduct__title {
     font-size: 17px;
-    font-weight: 800;
+    font-weight: 700;
+}
+/* Qty icons property */
+.product__quantity{
+	margin-top: 30px;
+}
+.product__quantity{
+	/* padding: 10px; */
+}
+.qty__icons{
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin: 5px;
+	background-color: lightgray;
+
+}
+.qty__icons:active {
+  /* CSS properties for icon when clicked */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.qty__icons:hover {
+  cursor: pointer;
 }

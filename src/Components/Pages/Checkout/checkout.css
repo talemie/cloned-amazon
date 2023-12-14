@@ -14,24 +14,3 @@
 	padding: 10px;
 	border-bottom: 1px solid lightgray;
 }
-/* Qty icons property */
-.product__quantity{
-	margin-top: 30px;
-}
-.product__quantity>h5{
-	padding: 10px;
-}
-.qty__icons{
-	border: 1px solid gray;
-	border-radius: 5px;
-	margin: 5px;
-	background-color: lightgray;
-
-}
-.qty__icons:active {
-  /* CSS properties for icon when clicked */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-.qty__icons:hover {
-  cursor: pointer;
-}

@@ -2,7 +2,6 @@ export const initialState = {
 	basket: [],
 	user: null,
 	product: [],
-	quantity: 0,
 };
 
 // reducer

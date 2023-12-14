@@ -3,7 +3,15 @@ import "./checkoutProduct.css";
 import { useStateValue } from "../../../StateProvider/StateProvider";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-function CheckoutProduct({ id, title, image, price, rating, quantity }) {
+function CheckoutProduct({
+	id,
+	title,
+	image,
+	price,
+	rating,
+	quantity,
+	isPaying,
+}) {
 	const [{ basket }, dispatch] = useStateValue();
 
 	// remove from basket function
@@ -32,10 +40,6 @@ function CheckoutProduct({ id, title, image, price, rating, quantity }) {
 			<img className="checkoutProduct__image" src={image} alt="" />
 			<div className="checkoutProduct__info">
 				<p className="checkoutProduct__title">{title}</p>
-				<p className="checkoutProduct__price">
-					<small>$</small>
-					<strong>{price}</strong>
-				</p>
 				<div className="checkoutProduct__rating">
 					{Array(rating)
 						.fill()
@@ -43,16 +47,23 @@ function CheckoutProduct({ id, title, image, price, rating, quantity }) {
 							<p key={i}>💛</p>
 						))}
 				</div>
+				<p className="checkoutProduct__price">
+					<small>$</small>
+					<strong>{price}</strong>
+				</p>
 				<div className="product__quantity">
 					<h5>
-						(Qty: <span>{quantity}</span>)
+						(Qty: <span>{quantity}</span>) (Price:{" "}
+						<span>{price * quantity}</span>)
 					</h5>
 					<div className="add_minusIcons">
 						<AddIcon onClick={addMore} className="qty__icons" />
 						<RemoveIcon onClick={remove} className="qty__icons" />
 					</div>
 				</div>
-				<button onClick={removeFromBasket}>Remove from Basket</button>
+				{!isPaying && (
+					<button onClick={removeFromBasket}>Remove from Basket</button>
+				)}
 			</div>
 		</div>
 	);

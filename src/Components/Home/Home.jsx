@@ -6,7 +6,7 @@ import { productList } from "../../CommonResources/prodcutList";
 function Home() {
 	// product images destructured here
 	const [
-		image1,
+		image1,image1a,
 		image2,
 		image3,
 		image4,
@@ -17,15 +17,15 @@ function Home() {
 		image9,
 		image10,
 	] = [
-		"https://m.media-amazon.com/images/I/71K6YQEI5RL._AC_UL320_.jpg",
+		"https://m.media-amazon.com/images/I/71K6YQEI5RL._AC_UL320_.jpg",'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61+BPJxcQrL._AC_UY218_.jpg',
 		"https://m.media-amazon.com/images/I/51IFiSD+kCL._AC_SY200_.jpg",
 		"https://m.media-amazon.com/images/I/71DDA+p+QqL._AC_UY218_.jpg",
 		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61idku5S0OL._AC_UY218_.jpg",
 		"https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_UY218_.jpg",
 		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/81gf+wgrcfS._AC_SL1500_.jpg",
-		"https://m.media-amazon.com/images/I/819zf0AMM2L._AC_UL320_.jpg",
-		"https://m.media-amazon.com/images/I/71UhMysaqzL._AC_UL320_.jpg",
-		"https://m.media-amazon.com/images/I/71MvpgJdBoL._AC_UL320_.jpg",
+		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51eU0W1rTFL._AC_SL1500_.jpg",
+		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/415BaMkpQsL._AC_SR320,320_.jpg",
+		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71PaRRuu45L._AC_SL1500_.jpg",
 		"https://m.media-amazon.com/images/I/81y8zGlpJWL._AC_UL320_.jpg",
 	];
 	return (
@@ -43,6 +43,14 @@ function Home() {
 						image={image1}
 						price={26.99}
 						rating={5}
+						quantity={1}
+					/>
+					<Product
+						id={111}
+						title="HP 15.6” HD Student Laptop, Intel Pentium Silver N5030, 8GB RAM, 256GB PCIe SSD, Intel UHD ..."
+						image={image1a}
+						price={399.99}
+						rating={4}
 						quantity={1}
 					/>
 					<Product
@@ -93,23 +101,23 @@ function Home() {
 				<div className="home__row">
 					<Product
 						id={7}
-						title="Sakugi Dish Drying Rack - X-Large Stainless Steel Dish Rack ..."
+						title="Ember Temperature Control Smart Mug 2, 10 Oz, App-Controlled  ..."
 						image={image7}
-						price={219.99}
-						rating={2}
+						price={119.99}
+						rating={5}
 						quantity={1}
 					/>
 					<Product
 						id={8}
-						title="KEEMAKE Chef Knife 8 inch, Kitchen Knife with Japanese 440C..."
+						title="GoveeLife Smart Electric Kettle, 0.8L WiFi Gooseneck Kettle  ..."
 						image={image8}
-						price={29.99}
-						rating={3}
+						price={79.99}
+						rating={4}
 						quantity={1}
 					/>
 					<Product
 						id={9}
-						title="Owala FreeSip Insulated Stainless Steel Water Bottle with Straw..."
+						title="Galanz Retro Electric Kettle with Heat Resistant Handle and  ..."
 						image={image9}
 						price={49.99}
 						rating={4}

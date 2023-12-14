@@ -20,7 +20,7 @@ function ProductDetail() {
 	// console.log("Fetched product", productFetched);
 	return (
 		<div className="addional_view">
-			<h1 className="title">Product detail</h1>
+			{/* <h1 className="title">Product detail</h1> */}
 			<div className="product_detail">
 				{productFetched.map((item, i) => (
 					<Product

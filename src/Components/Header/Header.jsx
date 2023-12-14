@@ -28,7 +28,7 @@ function Header() {
 				<input
 					className="header__searchInput"
 					type="text"
-					placeholder="This website is Not Official !!! Just for only training purpose. "
+					placeholder="This is Not an Official website!!!"
 				/>
 				<SearchIcon className="header__searchIcon" />
 			</div>
