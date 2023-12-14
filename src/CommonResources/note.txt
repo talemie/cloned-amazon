@@ -11,3 +11,28 @@ Use Reducer
 
 - to install reac module with dependencies if the installation requires dependencies
     npm i @stripe/react-stripe-js --legacy-peer-deps
+
+    products list url from Ousman: https://api.apify.com/v2/datasets/lZhgrrhc4iFxo0omX/items?clean=true&format=json&limit=1000&view=overview
+
+    For Qty in cart :
+     const totalQuantity = state.cart.reduce(
+		(quantity, item) => quantity + item.quantity,
+		0
+	); **** when quantity is case "INCREASE_QUANTITY":
+			return {
+				...state,
+				cart: state.cart.map((item) =>
+					item.asin === action.payload.asin
+						? { ...item, quantity: item.quantity + 1 }
+						: item
+				),
+			};
+		case "DECREASE_QUANTITY":
+			return {
+				...state,
+				cart: state.cart.map((item) =>
+					item.asin === action.payload.asin && item.quantity > 1
+						? { ...item, quantity: item.quantity - 1 }
+						: item
+				),
+			}; 

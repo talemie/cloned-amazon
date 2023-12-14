@@ -3,7 +3,7 @@ import "./subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "../../StateProvider/StateProvider";
 import { useNavigate } from "react-router-dom";
-import { getBasketTotal } from "../../StateProvider/reducer";
+import { getBasketSize, getBasketTotal } from "../../StateProvider/reducer";
 function Subtotal() {
 	const [{ basket }, dispatch] = useStateValue();
 	const navigate = useNavigate();
@@ -16,7 +16,8 @@ function Subtotal() {
 				renderText={(value) => (
 					<div>
 						<p>
-							Subtotal({basket.length} {basket.length == 1 ? "item" : "items"}):
+							Subtotal({getBasketSize(basket)}
+							{getBasketSize(basket) == 1 ? " item" : " items"}):
 							<strong>{value}</strong>
 						</p>
 						<small className="subtotal__gift">

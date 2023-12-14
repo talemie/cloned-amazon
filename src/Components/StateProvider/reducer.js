@@ -66,18 +66,21 @@ const reducer = (state, action) => {
 				...state,
 				user: action.user,
 			};
+		// for small products/bottom - viewing detail feature
+		// ------------------------------------------
 		case "SAVE_PRODUCT":
 			return {
 				...state,
-				product: [...state.product, action.item],
+				product: [action.item],
 			};
 		case "REMOVE_PRODUCT":
 			return {
 				...state,
 				product: [],
 			};
+		// -----------------------------------------------
 
-		// add/minus product Qty feature
+		// add/minus product Qty feature-----------------------------------
 		case "PLUS_QUANTITY":
 			// if (state.) {
 
@@ -95,24 +98,26 @@ const reducer = (state, action) => {
 			};
 		case "MINUS_QUANTITY":
 			const item = state.basket.find((item) => item.id === action.id);
-			if (item?.quantity===1) {
+			if (item?.quantity === 1) {
 				// new quantity is 0,remove item from cart
 				return {
 					...state,
-					basket: state.basket.filter(item=>item.id!==action.id)
+					basket: state.basket.filter((item) => item.id !== action.id),
 				};
 			}
-		// decrement quantity
+			// decrement quantity
 			return {
 				...state,
-				basket: state.basket.map(
-					item => item.id === action.id ? {
-						...item,
-						quantity:item.quantity-1
-					}:item
-				)
-			}
-			
+				basket: state.basket.map((item) =>
+					item.id === action.id
+						? {
+								...item,
+								quantity: item.quantity - 1,
+						  }
+						: item
+				),
+			};
+		// -----------------------------------------------
 		default:
 			return state;
 	}
@@ -122,3 +127,7 @@ export default reducer;
 // create a function to calculate the basket price
 export const getBasketTotal = (basket) =>
 	basket?.reduce((amount, item) => item.price * item.quantity + amount, 0);
+// basket size calculation
+
+export const getBasketSize = (basket) =>
+	basket?.reduce((amount, item) => item.quantity + amount, 0);

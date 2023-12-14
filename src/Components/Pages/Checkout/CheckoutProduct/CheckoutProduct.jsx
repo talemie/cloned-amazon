@@ -3,9 +3,8 @@ import "./checkoutProduct.css";
 import { useStateValue } from "../../../StateProvider/StateProvider";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-function CheckoutProduct({ id, title, image, price, rating,quantity}) {
+function CheckoutProduct({ id, title, image, price, rating, quantity }) {
 	const [{ basket }, dispatch] = useStateValue();
-	
 
 	// remove from basket function
 	const removeFromBasket = () => {
@@ -21,14 +20,12 @@ function CheckoutProduct({ id, title, image, price, rating,quantity}) {
 			type: "PLUS_QUANTITY",
 			id: id,
 		});
-		
 	};
 	const remove = () => {
 		dispatch({
 			type: "MINUS_QUANTITY",
 			id: id,
 		});
-		
 	};
 	return (
 		<div className="checkoutProduct">
@@ -42,14 +39,18 @@ function CheckoutProduct({ id, title, image, price, rating,quantity}) {
 				<div className="checkoutProduct__rating">
 					{Array(rating)
 						.fill()
-						.map((item,i) => (
+						.map((item, i) => (
 							<p key={i}>💛</p>
 						))}
 				</div>
 				<div className="product__quantity">
-					<h5>Qty. <span>{quantity}</span></h5>
-					<AddIcon onClick={addMore} />
-					<RemoveIcon onClick={remove} />
+					<h5>
+						(Qty: <span>{quantity}</span>)
+					</h5>
+					<div className="add_minusIcons">
+						<AddIcon onClick={addMore} className="qty__icons" />
+						<RemoveIcon onClick={remove} className="qty__icons" />
+					</div>
 				</div>
 				<button onClick={removeFromBasket}>Remove from Basket</button>
 			</div>
