@@ -7,6 +7,7 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { getBasketSize, getBasketTotal } from "../../StateProvider/reducer";
 import axios from '../../../CommonResources/axios.js'
+import { db } from "../../../CommonResources/firebase.js";
 
 
 function Payment() {
@@ -52,6 +53,15 @@ function Payment() {
 			}
 		}).then(({ paymentIntent }) => {
 			// paymentIntent= payment confirmation
+
+			// adding purchased product to firebase database
+			db.collection('users').doc(user?.uid).collection('orders').doc(paymentIntent.id).set({
+				basket: basket,
+				amount: paymentIntent.amount/100,
+				created:paymentIntent.created
+			})
+
+
 			setSucceeded(true)
 			setError(null)
 			setProcessing(false)
@@ -99,7 +109,7 @@ function Payment() {
 				<div className="payment__section">
 					<div className="payment__items">
 						{basket?.map((item, i) => (
-							<CheckoutProduct
+							<CheckoutProduct key={i}
 								id={item.id}
 								title={item.title}
 								price={item.price}
