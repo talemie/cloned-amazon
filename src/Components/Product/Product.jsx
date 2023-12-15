@@ -67,11 +67,11 @@ function Product({ id, title, image, price, rating, isSmall, quantity }) {
 				<img src={image} alt="" />
 			</div>
 			<div>
-				{isAdded && (
+				{/* {isAdded && (
 					<p className="product__alert">
 						<em>Product added!!</em>
 					</p>
-				)}
+				)} */}
 				{!isSmall && <button onClick={addToBasket}>Add to Cart</button>}
 
 			</div>

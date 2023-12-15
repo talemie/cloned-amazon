@@ -11,6 +11,7 @@ function CheckoutProduct({
 	rating,
 	quantity,
 	isPaying,
+	hideButton,
 }) {
 	const [{ basket }, dispatch] = useStateValue();
 
@@ -51,18 +52,25 @@ function CheckoutProduct({
 					<small>$</small>
 					<strong>{price}</strong>
 				</p>
-				<div className="product__quantity">
-					<h5>
-						(Qty: <span>{quantity}</span>) (Price:{" "}
-						<span>{price * quantity}</span>)
-					</h5>
-					<div className="add_minusIcons">
-						<AddIcon onClick={addMore} className="qty__icons" />
-						<RemoveIcon onClick={remove} className="qty__icons" />
-					</div>
-				</div>
-				{!isPaying && (
-					<button onClick={removeFromBasket}>Remove from Basket</button>
+				{!hideButton && (
+					<>
+						<div className="product__quantity">
+							<h5>
+								(Qty: <span>{quantity}</span>,{" "}
+								<span>
+									Price:
+									{price * quantity}
+								</span>
+								)
+							</h5>
+							<div className="add_minusIcons">
+								<AddIcon onClick={addMore} className="qty__icons" />
+								<RemoveIcon onClick={remove} className="qty__icons" />
+							</div>
+						</div>
+
+						<button onClick={removeFromBasket}>Remove from Basket</button>
+					</>
 				)}
 			</div>
 		</div>
