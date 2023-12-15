@@ -36,7 +36,9 @@ function App() {
 				});
 			}
 		});
+		
 	}, []);
+	// to scroll the page to the top when mounted
 	return (
 		<>
 			<Routes>

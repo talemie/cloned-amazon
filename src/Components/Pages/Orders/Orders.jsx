@@ -26,10 +26,16 @@ function Orders() {
 			setOrders([]);
 		}
 	}, [user]);
+
+	// to scroll the page to the top when mounted
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+	
 	return (
 		<div className="orders">
 			<h1>Your Orders</h1>
-			{!user&&<h2 className="mx-5">Sign in to see your orders</h2>}
+			{!user && <h2 className="mx-5">Sign in to see your orders</h2>}
 			<div className="orders__order">
 				{orders?.map((order) => (
 					<Order order={order} />

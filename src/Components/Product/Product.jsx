@@ -48,7 +48,7 @@ function Product({ id, title, image, price, rating, isSmall, quantity }) {
 			{!isSmall && (
 				<div className="product__info">
 					<p>{title}</p>
-					
+
 					<div className="product__rating">
 						{Array(rating)
 							.fill()
@@ -63,18 +63,8 @@ function Product({ id, title, image, price, rating, isSmall, quantity }) {
 				</div>
 			)}
 
-			<div>
-				<img src={image} alt="" />
-			</div>
-			<div>
-				{/* {isAdded && (
-					<p className="product__alert">
-						<em>Product added!!</em>
-					</p>
-				)} */}
-				{!isSmall && <button onClick={addToBasket}>Add to Cart</button>}
-
-			</div>
+			<img src={image} alt="" />
+			{!isSmall && <button onClick={addToBasket}>Add to Cart</button>}
 		</div>
 	);
 }

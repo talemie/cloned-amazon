@@ -2,3 +2,14 @@
     background-color: #131921;
     color: white;
 }
+.footer h5{
+     opacity: 0.6;
+}
+.text-body-secondary{
+    color: white !important;
+    opacity: 0.5;
+}
+footer{
+    margin: 0 auto !important;
+    justify-content: space-between;
+}

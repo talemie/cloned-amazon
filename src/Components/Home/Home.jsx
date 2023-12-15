@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./home.css";
 import Product from "../Product/Product";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
@@ -6,7 +6,8 @@ import { productList } from "../../CommonResources/prodcutList";
 function Home() {
 	// product images destructured here
 	const [
-		image1,image1a,
+		image1,
+		image1a,
 		image2,
 		image3,
 		image4,
@@ -17,7 +18,8 @@ function Home() {
 		image9,
 		image10,
 	] = [
-		"https://m.media-amazon.com/images/I/71K6YQEI5RL._AC_UL320_.jpg",'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61+BPJxcQrL._AC_UY218_.jpg',
+		"https://m.media-amazon.com/images/I/71K6YQEI5RL._AC_UL320_.jpg",
+		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61+BPJxcQrL._AC_UY218_.jpg",
 		"https://m.media-amazon.com/images/I/51IFiSD+kCL._AC_SY200_.jpg",
 		"https://m.media-amazon.com/images/I/71DDA+p+QqL._AC_UY218_.jpg",
 		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61idku5S0OL._AC_UY218_.jpg",
@@ -28,12 +30,17 @@ function Home() {
 		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71PaRRuu45L._AC_SL1500_.jpg",
 		"https://m.media-amazon.com/images/I/81y8zGlpJWL._AC_UL320_.jpg",
 	];
+
+	// to scroll the page to the top when mounted
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		<div className="home">
 			<div className="home__container">
 				<img
 					className="home__image"
-					src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
+					src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/7191th9dBnL._SX3000_.jpg"
 					alt=""
 				/>
 				<div className="home__row">

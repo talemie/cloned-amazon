@@ -10,62 +10,29 @@ function Footer() {
 						<h5>Get to Know Us</h5>
 						<ul className="nav flex-column">
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									Home
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Career
+								</Link>
 							</li>
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									Features
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Newsletter
+								</Link>
 							</li>
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									Pricing
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									About Amazon
+								</Link>
 							</li>
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									FAQs
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Accessibility
+								</Link>
 							</li>
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									About
-								</a>
-							</li>
-						</ul>
-					</div>
-
-					<div className="col mb-3"></div>
-
-					<div className="col mb-3">
-						<h5>Get to Know Us</h5>
-						<ul className="nav flex-column">
-							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									Home
-								</a>
-							</li>
-							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									Features
-								</a>
-							</li>
-							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									Pricing
-								</a>
-							</li>
-							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									FAQs
-								</a>
-							</li>
-							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									About
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Sustainability
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -74,29 +41,60 @@ function Footer() {
 						<h5>Make Money with Us</h5>
 						<ul className="nav flex-column">
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									Home
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Sell on Amazon
+								</Link>
 							</li>
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									Features
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Sell apps on Amazon
+								</Link>
 							</li>
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									Pricing
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Supply to Amazon
+								</Link>
 							</li>
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									FAQs
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Become an Affiliate
+								</Link>
 							</li>
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									About
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Become a Delivery Driver
+								</Link>
+							</li>
+						</ul>
+					</div>
+
+					<div className="col mb-3">
+						<h5>Amazon Payment Products</h5>
+						<ul className="nav flex-column">
+							<li className="nav-item mb-2">
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Amazon Visa
+								</Link>
+							</li>
+							<li className="nav-item mb-2">
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Amazon Store Card
+								</Link>
+							</li>
+							<li className="nav-item mb-2">
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Amazon Secured Card
+								</Link>
+							</li>
+							<li className="nav-item mb-2">
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Amazon Business Card
+								</Link>
+							</li>
+							<li className="nav-item mb-2">
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Shop with Points
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -105,29 +103,29 @@ function Footer() {
 						<h5>Let Us Help You</h5>
 						<ul className="nav flex-column">
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									Home
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Your Account
+								</Link>
 							</li>
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									Features
-								</a>
+								<Link to="/orders" className="nav-link p-0 text-body-secondary">
+									Your Orders
+								</Link>
 							</li>
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									Pricing
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Amazon Prime
+								</Link>
 							</li>
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									FAQs
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Returns & Replacements
+								</Link>
 							</li>
 							<li className="nav-item mb-2">
-								<a href="#" className="nav-link p-0 text-body-secondary">
-									About
-								</a>
+								<Link to="#" className="nav-link p-0 text-body-secondary">
+									Help
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -139,7 +137,7 @@ function Footer() {
 							src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
 							alt=""
 						/>
-					</Link>
+				  </Link>
 				</div>
 			</div>
 		</>
