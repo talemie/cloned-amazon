@@ -3,6 +3,7 @@ import "./home.css";
 import Product from "../Product/Product";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { productList } from "../../CommonResources/prodcutList";
+import HomeCarsoul from "./HomeCarsoul/HomeCarsoul";
 function Home() {
 	// product images destructured here
 	const [
@@ -38,11 +39,12 @@ function Home() {
 	return (
 		<div className="home">
 			<div className="home__container">
-				<img
+				<HomeCarsoul/>
+				{/* <img
 					className="home__image"
 					src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/7191th9dBnL._SX3000_.jpg"
 					alt=""
-				/>
+				/> */}
 				<div className="home__row">
 					<Product
 						id={1}
