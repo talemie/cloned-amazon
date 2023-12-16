@@ -57,8 +57,8 @@
     /* margin-top: 30px; */
     padding: 20px;
     width: 100%;
-    max-height: 200px;
-    min-width: 100px;
+    max-height: 240px;
+    min-width: 150px;
     background-color: white;
     z-index: 1;
     box-shadow: 0 6px 18px -9px rgba(0, 0, 0, 0.75);
@@ -67,7 +67,7 @@
 .small__product:hover{
 cursor: pointer;
 }
-.small__product  img {
+.small__product img {
     max-height: 200px;
     width: 100%;
     object-fit: contain;
