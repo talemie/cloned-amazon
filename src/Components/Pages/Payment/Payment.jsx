@@ -28,10 +28,10 @@ function Payment() {
 		const getClientSecret = async () => {
 			try {
 				const response = await axios({
-				method: 'GET',
-				// Stripe expects the total in currencies subunits
-				url: `/payments/create?total=${getBasketTotal(basket) * 100}`
-			})
+					method: "GET",
+
+					url: `/payments/create?total=${getBasketTotal(basket) * 100}`, // *100 -> b/c Stripe expects the total in currencies subunits
+				});
 			// console.log(response.data.clientSecret);
 			setClicentSecret(response.data.clientSecret)
 			} catch (error) {
@@ -83,10 +83,10 @@ function Payment() {
 		<div className="payment">
 			<div className="payment__container">
 				<h1>
-					Checkout{" "}
+					Checkout
 					{
 						<Link to={"/checkout"}>
-							({getBasketSize(basket)}{" "}
+							({getBasketSize(basket)}
 							{getBasketSize(basket) == 1 ? " item" : " items"})
 						</Link>
 					}

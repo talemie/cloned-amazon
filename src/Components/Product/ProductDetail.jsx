@@ -16,6 +16,11 @@ function ProductDetail() {
 		};
 	}, []);
 
+	// to scroll the page to the top when mounted
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	// console.log("TEST BASKET", product);
 	// console.log("Fetched product", productFetched);
 	return (

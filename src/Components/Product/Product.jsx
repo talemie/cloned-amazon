@@ -40,6 +40,17 @@ function Product({ id, title, image, price, rating, isSmall, quantity }) {
 			},
 		});
 	};
+	
+	// truncate the product title
+	function truncateString(str, num) {
+		// Clear out that junk in your trunk
+		if (str.length > num) {
+			return str.slice(0, num) + "...";
+		} else {
+			return str;
+		}
+	}
+	
 	return (
 		<div
 			className={!isSmall ? "product" : "small__product"}
@@ -47,7 +58,7 @@ function Product({ id, title, image, price, rating, isSmall, quantity }) {
 		>
 			{!isSmall && (
 				<div className="product__info">
-					<p>{title}</p>
+					<p>{truncateString(title,70)}</p>
 
 					<div className="product__rating">
 						{Array(rating)
