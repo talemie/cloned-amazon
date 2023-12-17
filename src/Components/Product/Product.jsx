@@ -6,7 +6,7 @@ function Product({ id, title, image, price, rating, isSmall, quantity }) {
 	const [{ basket }, dispatch] = useStateValue();
 	const [isAdded, setIsAdded] = useState(false);
 	const navigate = useNavigate();
-	console.log("This is the basket", basket);
+	// console.log("This is the basket", basket);
 	const addToBasket = () => {
 		dispatch({
 			type: "ADD_TO_BASKET",
@@ -40,17 +40,16 @@ function Product({ id, title, image, price, rating, isSmall, quantity }) {
 			},
 		});
 	};
-	
+
 	// truncate the product title
 	function truncateString(str, num) {
-		// Clear out that junk in your trunk
 		if (str.length > num) {
 			return str.slice(0, num) + "...";
 		} else {
 			return str;
 		}
 	}
-	
+
 	return (
 		<div
 			className={!isSmall ? "product" : "small__product"}
@@ -58,8 +57,7 @@ function Product({ id, title, image, price, rating, isSmall, quantity }) {
 		>
 			{!isSmall && (
 				<div className="product__info">
-					<p>{truncateString(title,70)}</p>
-
+					<p>{truncateString(title, 50)}</p>
 					<div className="product__rating">
 						{Array(rating)
 							.fill()
@@ -73,7 +71,6 @@ function Product({ id, title, image, price, rating, isSmall, quantity }) {
 					</p>
 				</div>
 			)}
-
 			<img src={image} alt="" />
 			{!isSmall && <button onClick={addToBasket}>Add to Cart</button>}
 		</div>

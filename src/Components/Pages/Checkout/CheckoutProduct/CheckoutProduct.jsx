@@ -60,7 +60,7 @@ function CheckoutProduct({
 							<h5>
 								(Qty: <span>{quantity}</span>,{" "}
 								<span>
-									Price:
+									Sub total:
 									{(price * quantity).toFixed(2)}
 								</span>
 								)

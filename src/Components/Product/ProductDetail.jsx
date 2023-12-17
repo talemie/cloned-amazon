@@ -28,7 +28,7 @@ function ProductDetail() {
 			{/* <h1 className="title">Product detail</h1> */}
 			<div className="product_detail">
 				{productFetched.map((item, i) => (
-					<Product
+					<Product key={i}
 						className="pro_fetched"
 						id={item.id}
 						title={item.title}
