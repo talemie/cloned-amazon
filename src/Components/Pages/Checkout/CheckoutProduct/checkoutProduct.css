@@ -1,34 +1,58 @@
 .yellow {
-    color: #f0c14b;
+	color: #f0c14b;
 }
 .checkoutProduct {
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 20px;
+	display: flex;
+	margin: 20px 0;
 }
 .checkoutProduct__info {
-    padding-left: 20px;
-    /* width: 80%; */
+	padding-left: 20px;
+	/* width: 80%; */
 }
 .checkoutProduct__info > button {
-    background: #f0c14b;
-    border: 1px solid;
-    margin-top: 10px;
-    border-color: #a88734 #9c7e31 #846a29;
-    border-radius: 3px;
+	background: #f0c14b;
+	border: 1px solid;
+	margin-top: 10px;
+	border-color: #a88734 #9c7e31 #846a29;
+	border-radius: 3px;
 	padding: 3px;
-    color: #111;
+	color: #111;
+}
+.checkoutProduct__imageWrapper {
+	width: 200px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
 }
 .checkoutProduct__image {
-    object-fit: contain;
-    width: 180px;
-    height: 180px;
+	object-fit: contain;
+	width: 180px;
+	height: 180px;
+	padding: 5px;
 }
 
 .checkoutProduct__rating {
-    display: flex;
+	display: flex;
+	margin-top: 10px;
 }
 .checkoutProduct__title {
-    font-size: 17px;
-    font-weight: 800;
+	font-size: 17px;
+	font-weight: 700;
+}
+/* Qty icons property */
+.product__quantity {
+	margin-top: 30px;
+}
+
+.qty__icons {
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin: 5px;
+	background-color: lightgray;
+}
+.qty__icons:active {
+	/* CSS properties for icon when clicked */
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.qty__icons:hover {
+	cursor: pointer;
 }

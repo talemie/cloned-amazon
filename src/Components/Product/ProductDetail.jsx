@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useStateValue } from "../StateProvider/StateProvider";
 import Product from "./Product";
-import './productDetail.css'
+import "./productDetail.css";
 
 function ProductDetail() {
 	const [{ basket, product }, dispatch] = useStateValue();
@@ -16,20 +16,26 @@ function ProductDetail() {
 		};
 	}, []);
 
+	// to scroll the page to the top when mounted
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	// console.log("TEST BASKET", product);
 	// console.log("Fetched product", productFetched);
 	return (
 		<div className="addional_view">
-			<h1 className="title">Product detail</h1>
+			{/* <h1 className="title">Product detail</h1> */}
 			<div className="product_detail">
 				{productFetched.map((item, i) => (
-					<Product
+					<Product key={i}
 						className="pro_fetched"
 						id={item.id}
 						title={item.title}
 						price={item.price}
 						image={item.image}
 						rating={item.rating}
+						quantity={item.quantity}
 					/>
 				))}
 				<div className="loading_detail">

@@ -18,10 +18,10 @@ function Checkout() {
 					src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
 					alt=""
 				/>
-				<h3>Hello { !user?'Guest':user.email}</h3>
-				<h2 className="checkout__title">Your Shopping Basket</h2>
+				<h4>Hello <em>{ !user?'Guest':user.email}</em></h4>
+				<h4 className="checkout__title">Your Shopping Basket</h4>
 				{basket.map((item,i) => (
-					<CheckoutProduct key={i} id={item.id} title={item.title} image={item.image} price={item.price} rating={item.rating} />
+					<CheckoutProduct key={i} id={item.id} title={item.title} image={item.image} price={item.price} rating={item.rating} quantity={item.quantity} />
 				))}
 				
 			</div>

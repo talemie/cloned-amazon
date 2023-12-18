@@ -5,6 +5,7 @@ import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../StateProvider/StateProvider";
 import { auth } from "../../CommonResources/firebase";
+import { getBasketSize } from "../StateProvider/reducer";
 function Header() {
 	const [{ basket, user }, dispatch] = useStateValue();
 	const handleAuthentication = () => {
@@ -12,6 +13,7 @@ function Header() {
 			auth.signOut();
 		}
 	};
+
 	return (
 		<div className="header">
 			<Link to="/">
@@ -26,7 +28,7 @@ function Header() {
 				<input
 					className="header__searchInput"
 					type="text"
-					placeholder="This website is Not Official !!! Just for only training purpose. "
+					placeholder="This is Not an Official website!!!"
 				/>
 				<SearchIcon className="header__searchIcon" />
 			</div>
@@ -41,21 +43,23 @@ function Header() {
 						</span>
 					</div>
 				</Link>
+				<Link to="/orders">
+					<div className="header__option">
+						<span className="header__optionLineOne">Returns</span>
+						<span className="header__optionLineTwo">&Orders</span>
+					</div>
+				</Link>
 
-				<div className="header__option">
-					<span className="header__optionLineOne">Returns</span>
-					<span className="header__optionLineTwo">&Orders</span>
-				</div>
 				<div className="header__option">
 					<span className="header__optionLineOne">Your</span>
 					<span className="header__optionLineTwo">Prime</span>
 				</div>
-				<Link to="checkout">
+				<Link to="/checkout">
 					<div className="header__optionBasket">
 						<ShoppingBasketIcon />
 
 						<span className="header__optionLineTwo header__basketCount">
-							{basket.length}
+							{getBasketSize(basket)}
 						</span>
 					</div>
 				</Link>

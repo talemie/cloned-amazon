@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./product.css";
 import { useStateValue } from "../StateProvider/StateProvider";
 import { useNavigate } from "react-router-dom";
-function Product({ id, title, image, price, rating, isSmall }) {
+function Product({ id, title, image, price, rating, isSmall, quantity }) {
 	const [{ basket }, dispatch] = useStateValue();
 	const [isAdded, setIsAdded] = useState(false);
 	const navigate = useNavigate();
-	console.log("This is the basket", basket);
+	// console.log("This is the basket", basket);
 	const addToBasket = () => {
 		dispatch({
 			type: "ADD_TO_BASKET",
@@ -16,13 +16,14 @@ function Product({ id, title, image, price, rating, isSmall }) {
 				price: price,
 				image: image,
 				rating: rating,
+				quantity: quantity,
 			},
 		});
 		// showing the product added msg
 		setIsAdded(true);
 		setTimeout(() => {
 			setIsAdded(false);
-		}, 1000);
+		}, 300);
 	};
 	// show product detail function
 	const showDetail = () => {
@@ -35,41 +36,43 @@ function Product({ id, title, image, price, rating, isSmall }) {
 				price: price,
 				image: image,
 				rating: rating,
+				quantity: quantity,
 			},
 		});
 	};
+
+	// truncate the product title
+	function truncateString(str, num) {
+		if (str.length > num) {
+			return str.slice(0, num) + "...";
+		} else {
+			return str;
+		}
+	}
+
 	return (
 		<div
 			className={!isSmall ? "product" : "small__product"}
 			onClick={isSmall && showDetail}
 		>
-			{!isSmall &&<div className="product__info">
-				<p>{title}</p>
-				<p className="product__price">
-					<small>$</small>
-					<strong>{price}</strong>
-				</p>
-				<div className="product__rating">
-					{Array(rating)
-						.fill()
-						.map((item, i) => (
-							<p key={i}>💛</p>
-						))}
+			{!isSmall && (
+				<div className="product__info">
+					<p>{truncateString(title, 50)}</p>
+					<div className="product__rating">
+						{Array(rating)
+							.fill()
+							.map((item, i) => (
+								<p key={i}>💛</p>
+							))}
+					</div>
+					<p className="product__price">
+						<small>$</small>
+						<strong>{price}</strong>
+					</p>
 				</div>
-			</div>}
-			
-			<div>
-				<img src={image} alt="" />
-			</div>
-			<div>
-				{!isSmall && <button onClick={addToBasket}>Add to Cart</button>}
-
-				{isAdded && (
-					<h5 className="product__alert">
-						<em>Product added!!</em>
-					</h5>
-				)}
-			</div>
+			)}
+			<img src={image} alt="" />
+			{!isSmall && <button onClick={addToBasket}>Add to Cart</button>}
 		</div>
 	);
 }

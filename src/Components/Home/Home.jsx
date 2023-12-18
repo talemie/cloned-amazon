@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./home.css";
 import Product from "../Product/Product";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { productList } from "../../CommonResources/prodcutList";
+import HomeCarsoul from "./HomeCarsoul/HomeCarsoul";
+import HomeButtomCarsoul from "./HomeCarsoul/HomeButtomCarsoul";
 function Home() {
 	// product images destructured here
 	const [
 		image1,
+		image1a,
 		image2,
 		image3,
 		image4,
@@ -15,27 +18,34 @@ function Home() {
 		image7,
 		image8,
 		image9,
-		image10
+		image10,
 	] = [
 		"https://m.media-amazon.com/images/I/71K6YQEI5RL._AC_UL320_.jpg",
+		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61+BPJxcQrL._AC_UY218_.jpg",
 		"https://m.media-amazon.com/images/I/51IFiSD+kCL._AC_SY200_.jpg",
 		"https://m.media-amazon.com/images/I/71DDA+p+QqL._AC_UY218_.jpg",
 		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61idku5S0OL._AC_UY218_.jpg",
 		"https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_UY218_.jpg",
 		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/81gf+wgrcfS._AC_SL1500_.jpg",
-		"https://m.media-amazon.com/images/I/819zf0AMM2L._AC_UL320_.jpg",
-		"https://m.media-amazon.com/images/I/71UhMysaqzL._AC_UL320_.jpg",
-		"https://m.media-amazon.com/images/I/71MvpgJdBoL._AC_UL320_.jpg",
+		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51eU0W1rTFL._AC_SL1500_.jpg",
+		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/415BaMkpQsL._AC_SR320,320_.jpg",
+		"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71PaRRuu45L._AC_SL1500_.jpg",
 		"https://m.media-amazon.com/images/I/81y8zGlpJWL._AC_UL320_.jpg",
 	];
+
+	// to scroll the page to the top when mounted
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		<div className="home">
 			<div className="home__container">
-				<img
+				<HomeCarsoul/>
+				{/* <img
 					className="home__image"
-					src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
+					src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/7191th9dBnL._SX3000_.jpg"
 					alt=""
-				/>
+				/> */}
 				<div className="home__row">
 					<Product
 						id={1}
@@ -43,6 +53,15 @@ function Home() {
 						image={image1}
 						price={26.99}
 						rating={5}
+						quantity={1}
+					/>
+					<Product
+						id={111}
+						title="HP 15.6” HD Student Laptop, Intel Pentium Silver N5030, 8GB RAM, 256GB PCIe SSD, Intel UHD ..."
+						image={image1a}
+						price={399.99}
+						rating={4}
+						quantity={1}
 					/>
 					<Product
 						id={2}
@@ -50,6 +69,7 @@ function Home() {
 						image={image2}
 						price={89.99}
 						rating={4}
+						quantity={1}
 					/>
 				</div>
 				<div className="home__row">
@@ -59,6 +79,7 @@ function Home() {
 						image={image3}
 						price={219.99}
 						rating={2}
+						quantity={1}
 					/>
 					<Product
 						id={4}
@@ -66,6 +87,7 @@ function Home() {
 						image={image4}
 						price={199.99}
 						rating={3}
+						quantity={1}
 					/>
 					<Product
 						id={5}
@@ -73,6 +95,7 @@ function Home() {
 						image={image5}
 						price={49.99}
 						rating={4}
+						quantity={1}
 					/>
 				</div>
 				<div className="home__row">
@@ -82,29 +105,33 @@ function Home() {
 						image={image6}
 						price={1119.99}
 						rating={5}
+						quantity={1}
 					/>
 				</div>
 				<div className="home__row">
 					<Product
 						id={7}
-						title="Sakugi Dish Drying Rack - X-Large Stainless Steel Dish Rack ..."
+						title="Ember Temperature Control Smart Mug 2, 10 Oz, App-Controlled  ..."
 						image={image7}
-						price={219.99}
-						rating={2}
+						price={119.99}
+						rating={5}
+						quantity={1}
 					/>
 					<Product
 						id={8}
-						title="KEEMAKE Chef Knife 8 inch, Kitchen Knife with Japanese 440C..."
+						title="GoveeLife Smart Electric Kettle, 0.8L WiFi Gooseneck Kettle  ..."
 						image={image8}
-						price={199.99}
-						rating={3}
+						price={79.99}
+						rating={4}
+						quantity={1}
 					/>
 					<Product
 						id={9}
-						title="Owala FreeSip Insulated Stainless Steel Water Bottle with Straw..."
+						title="Galanz Retro Electric Kettle with Heat Resistant Handle and  ..."
 						image={image9}
 						price={49.99}
 						rating={4}
+						quantity={1}
 					/>
 					<Product
 						id={10}
@@ -112,6 +139,7 @@ function Home() {
 						image={image10}
 						price={49.99}
 						rating={4}
+						quantity={1}
 					/>
 				</div>
 				{/* for small products--scrollable */}
@@ -120,13 +148,15 @@ function Home() {
 				</h3>
 				<div className="home__rowSmall">
 					{productList?.map((item, i) => (
-						<Product className='bottom__product'
+						<Product
+							className="bottom__product"
 							key={i}
 							id={item.id}
 							title={item.title}
 							image={item.image}
 							price={item.price}
 							rating={item.rating}
+							quantity={item.quantity}
 							isSmall
 						/>
 					))}
