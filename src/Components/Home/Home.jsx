@@ -4,7 +4,6 @@ import Product from "../Product/Product";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { productList } from "../../CommonResources/prodcutList";
 import HomeCarsoul from "./HomeCarsoul/HomeCarsoul";
-import HomeButtomCarsoul from "./HomeCarsoul/HomeButtomCarsoul";
 function Home() {
 	// product images destructured here
 	const [
