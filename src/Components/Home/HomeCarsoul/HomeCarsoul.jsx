@@ -1,5 +1,4 @@
 import React from "react";
-
 function HomeCarsoul() {
 	return (
 		<div className="home__image">

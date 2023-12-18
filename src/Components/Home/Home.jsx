@@ -161,7 +161,6 @@ function Home() {
 						/>
 					))}
 				</div>
-				{/* <HomeButtomCarsoul/> */}
 			</div>
 		</div>
 	);

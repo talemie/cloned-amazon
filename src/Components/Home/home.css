@@ -9,15 +9,7 @@
 	margin-bottom: -150px;
 	position: relative;
 	width: 100%;
-	z-index: -1 !important;
-	mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-	-webkit-mask-image: linear-gradient(black, transparent);
-}
-.home__image {
-	margin-bottom: -150px;
-	position: relative;
-	width: 100%;
-	z-index: -1 !important;
+	/* z-index: -1 !important; */
 	mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 	-webkit-mask-image: linear-gradient(black, transparent);
 }
