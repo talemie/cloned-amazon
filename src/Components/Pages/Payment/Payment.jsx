@@ -44,6 +44,9 @@ function Payment() {
 
 	const handleSubmit = async (event) => {
 		event.preventDefault()
+		if (!user) {
+			
+		}
 		setProcessing(true)
 
 		const payload = await stripe.confirmCardPayment(clientSecret, {

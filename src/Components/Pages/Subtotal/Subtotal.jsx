@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "../../StateProvider/StateProvider";
 import { useNavigate } from "react-router-dom";
 import { getBasketSize, getBasketTotal } from "../../StateProvider/reducer";
 function Subtotal() {
-	const [{ basket }, dispatch] = useStateValue();
+	const [{ basket, user }, dispatch] = useStateValue();
+	const[isUser,setIsUser]=useState(true)
 	const navigate = useNavigate();
-	// calculating basket size
-	
+
+	const goCheckout = () => {
+		// check if user exists before proceeding for checkout
+		if (!user) {
+			setIsUser(false)
+			setTimeout(() => {
+				setIsUser(true);
+			}, 1000);
+			return
+		}
+		navigate("/payment");
+	}
 	
 	return (
 		<div className="subtotal">
@@ -32,7 +43,8 @@ function Subtotal() {
 				thousandSeparator={true}
 				prefix={"$"}
 			/>
-			<button onClick={(e) => navigate("/payment")}>Proceed to Checkout</button>
+			<button onClick={goCheckout}>Proceed to Checkout</button>
+			{!isUser && <p className="text-danger">Please signin to proceed!</p>}
 		</div>
 	);
 }
