@@ -1,0 +1,24 @@
+.sub__header{
+    background-color: #293647;
+    color: white;
+    display: flex;
+    padding: 5px;
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+}
+.lists{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    width: 100%;
+    font-size: small;
+    padding: 3px;
+}
+.lists div{
+color: white;
+}
+.lists div:hover{
+border: 1px solid white;
+
+}
