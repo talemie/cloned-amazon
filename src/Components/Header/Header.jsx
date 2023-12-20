@@ -7,6 +7,8 @@ import { useStateValue } from "../StateProvider/StateProvider";
 import { auth } from "../../CommonResources/firebase";
 import { getBasketSize } from "../StateProvider/reducer";
 import SubHeader from "./SubHeader";
+import SearchDropDown from "./SearchDropDown";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 function Header() {
 	const [{ basket, user }, dispatch] = useStateValue();
 	const handleAuthentication = () => {
@@ -25,8 +27,17 @@ function Header() {
 						alt=""
 					/>
 				</Link>
+				<div className="delivery__location header__option">
+					<span className="header__optionLineOne mx-4 px-1">
+						Delivering to Chicago, USA
+					</span>
+					<span className="header__optionLineTwo">
+						<LocationOnIcon /> Update Location
+					</span>
+				</div>
 
 				<div className="header__search">
+					<SearchDropDown className="search_icon" />
 					<input
 						className="header__searchInput"
 						type="text"
@@ -67,7 +78,7 @@ function Header() {
 					</Link>
 				</div>
 			</div>
-			<SubHeader/>
+			<SubHeader />
 		</>
 	);
 }
