@@ -8,7 +8,9 @@ function Footer() {
 	}
 	return (
 		<>
-				<div className="back_top" onClick={takeMeTop}>Back to top</div>
+			<div className="back_top" onClick={takeMeTop}>
+				Back to top
+			</div>
 			<div className="container-fluid footer">
 				<footer>
 					<div className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5  ">
@@ -152,7 +154,16 @@ function Footer() {
 								{" "}
 								<LanguageIcon /> English
 							</div>
-							<div className="footer__lang">United States</div>
+							<div className="footer__lang">
+								United States{" "}
+								<span>
+									<img
+										className="flag_footer"
+										src="https://t3.ftcdn.net/jpg/05/43/00/48/240_F_543004860_AiMa6Qr8ub2khwxduNxWg8R9bpYTauW4.jpg"
+										alt=""
+									/>
+								</span>
+							</div>
 						</div>
 					</div>
 				</footer>

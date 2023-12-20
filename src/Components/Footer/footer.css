@@ -45,3 +45,6 @@ footer{
     cursor: pointer;
 background-color: #21354e;
 }
+ .flag_footer{
+    max-width: 20px;
+ }

@@ -47,7 +47,12 @@ function Header() {
 				</div>
 				<div className="header__nav">
 					<div className="country__flag header__option">
-						<span className="header__optionLineOne"></span>
+						<span className="header__optionLineOne">
+							<img className="flag"
+								src="https://t3.ftcdn.net/jpg/05/43/00/48/240_F_543004860_AiMa6Qr8ub2khwxduNxWg8R9bpYTauW4.jpg"
+								alt=""
+							/>
+						</span>
 						<span className="header__optionLineTwo">EN</span>
 					</div>
 					<Link to={!user && "/login"} className="header__itemsBorder">
