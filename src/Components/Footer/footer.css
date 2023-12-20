@@ -3,13 +3,45 @@
     color: white;
 }
 .footer h5{
-     opacity: 0.6;
+     opacity: 0.8;
 }
 .text-body-secondary{
     color: white !important;
+    font-size: small;
     opacity: 0.5;
 }
 footer{
     margin: 0 auto !important;
     justify-content: space-between;
+}
+.row{
+    justify-content: space-evenly;
+}
+.bottom__flagwrapper{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+}
+.footer__lang{
+    border: 1px solid rgb(107, 104, 104);
+    border-radius: 5px;
+    max-height: 50px;    
+    margin-right: 10px;
+    padding: 10px;
+    opacity: 0.6;
+}
+.footer__langWrapper{
+    display: flex;
+    margin-left: 120px;
+}
+.back_top{
+    height: 40px;
+    padding: 5px;
+    background-color: #1a2533;
+    text-align: center;
+    color: white;
+}
+.back_top:hover{
+    cursor: pointer;
+background-color: #21354e;
 }
