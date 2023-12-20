@@ -10,7 +10,12 @@
 }
 .all__list{
      color: white;
+      border: 1px solid #195851;
+      padding: 0 3px;
 }
+ .all__list:hover{
+    border: 1px solid white;
+ }
 .lists{
     display: flex;
     justify-content: space-evenly;

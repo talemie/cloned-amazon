@@ -20,14 +20,14 @@ function Header() {
 	return (
 		<>
 			<div className="header">
-				<Link to="/">
+				<Link to="/" className="header__itemsBorder">
 					<img
 						className="header__logo"
 						src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
 						alt=""
 					/>
 				</Link>
-				<div className="delivery__location header__option">
+				<div className="header__itemsBorder header__option">
 					<span className="header__optionLineOne mx-4 px-1">
 						Delivering to Chicago, USA
 					</span>
@@ -46,7 +46,13 @@ function Header() {
 					<SearchIcon className="header__searchIcon" />
 				</div>
 				<div className="header__nav">
-					<Link to={!user && "/login"}>
+					<div className="country__flag header__option">
+						<span className="header__optionLineOne">
+							
+						</span>
+						<span className="header__optionLineTwo">EN</span>
+					</div>
+					<Link to={!user && "/login"} className="header__itemsBorder">
 						<div onClick={handleAuthentication} className="header__option">
 							<span className="header__optionLineOne">
 								Hello {!user ? "Guest" : user.email}
@@ -56,18 +62,18 @@ function Header() {
 							</span>
 						</div>
 					</Link>
-					<Link to="/orders">
+					<Link to="/orders" className="header__itemsBorder">
 						<div className="header__option">
 							<span className="header__optionLineOne">Returns</span>
 							<span className="header__optionLineTwo">&Orders</span>
 						</div>
 					</Link>
 
-					<div className="header__option">
+					<div className="header__option header__itemsBorder">
 						<span className="header__optionLineOne">Your</span>
 						<span className="header__optionLineTwo">Prime</span>
 					</div>
-					<Link to="/checkout">
+					<Link to="/checkout" className="header__itemsBorder">
 						<div className="header__optionBasket">
 							<ShoppingBasketIcon />
 
