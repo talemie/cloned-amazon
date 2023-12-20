@@ -4,7 +4,7 @@ function HomeCarsoul() {
 		<div className="home__image">
 			<div
 				id="carouselExampleAutoplaying"
-				className="carousel slide"
+				className="carousel slide carousel-fade"
 				data-bs-ride="carousel"
 			>
 				<div className="carousel-inner">
