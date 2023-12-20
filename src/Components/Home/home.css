@@ -9,7 +9,7 @@
 	margin-bottom: -150px;
 	position: relative;
 	width: 100%;
-	/* z-index: -1 !important; */
+	z-index: -1 !important;
 	mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 	-webkit-mask-image: linear-gradient(black, transparent);
 }
@@ -36,5 +36,11 @@
 	margin-top: 30px;
 	padding-top: 20px;
 	border-top: 1px solid lightgray;
+}
+/* for deals */
+.home__dealRows{
+	width: 95% !important ;
+	margin: 0 auto;
+	justify-content: space-between;
 }
 

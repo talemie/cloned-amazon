@@ -1,0 +1,43 @@
+.product__dealsWrapper {
+	width: 250px;
+	height: 360px;
+    padding: 5px;
+	background-color: white;
+	box-shadow: 0 6px 18px -9px rgba(0, 0, 0, 0.75);
+    margin: 5px 10px 20px;
+    position: relative;
+}
+
+.deal span {
+	background-color: #CC0C39;
+	padding: 2px 5px;
+	color: white;
+}
+.deal img {
+	max-width: 70px;
+    margin-bottom: 5px;
+}
+.single__deal img {
+	max-width: 200px;
+    margin-bottom: 5px;
+}
+.single__deal span{
+background-color: #CC0C39;;
+	padding: 3px;
+	color: white;
+}
+.product__dealsRow {
+	display: flex;
+	margin: 10px;
+	justify-content: space-between;
+	position: relative;
+	align-items: flex-end;
+}
+.deal {
+	margin-bottom: 5px;
+}
+.deals__link{
+    position: absolute;
+    bottom: 2px;
+    margin-top: 10px;
+}
