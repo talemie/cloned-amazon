@@ -29,7 +29,7 @@ function Header() {
 				</Link>
 				<div className="header__itemsBorder header__option">
 					<span className="header__optionLineOne mx-4 px-1">
-						Delivering to Chicago, USA
+						Delivering to Chicago, 60607
 					</span>
 					<span className="header__optionLineTwo">
 						<LocationOnIcon /> Update Location
@@ -47,9 +47,7 @@ function Header() {
 				</div>
 				<div className="header__nav">
 					<div className="country__flag header__option">
-						<span className="header__optionLineOne">
-							
-						</span>
+						<span className="header__optionLineOne"></span>
 						<span className="header__optionLineTwo">EN</span>
 					</div>
 					<Link to={!user && "/login"} className="header__itemsBorder">
@@ -62,7 +60,10 @@ function Header() {
 							</span>
 						</div>
 					</Link>
-					<Link to="/orders" className="header__itemsBorder">
+					<Link
+						to={!user ? "/login" : "/orders"}
+						className="header__itemsBorder"
+					>
 						<div className="header__option">
 							<span className="header__optionLineOne">Returns</span>
 							<span className="header__optionLineTwo">&Orders</span>
