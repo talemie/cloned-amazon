@@ -4,6 +4,8 @@ import Product from "../Product/Product";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { productList } from "../../CommonResources/prodcutList";
 import HomeCarsoul from "./HomeCarsoul/HomeCarsoul";
+import ProductDeals from "../Product/ProductDeals";
+import SingleDeal from "../Product/SingleDeal";
 function Home() {
 	// product images destructured here
 	const [
@@ -39,72 +41,58 @@ function Home() {
 	return (
 		<div className="home">
 			<div className="home__container">
-				<HomeCarsoul/>
+				<HomeCarsoul />
 				{/* <img
 					className="home__image"
 					src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/7191th9dBnL._SX3000_.jpg"
 					alt=""
 				/> */}
-				<div className="home__row">
-					<Product
-						id={1}
-						title="Fccabin Adjustable Laptop Stand for Desk, Ergonomic Aluminum Laptop Riser for..."
-						image={image1}
-						price={26.99}
-						rating={5}
-						quantity={1}
+				<div className="home__row home__dealRows">
+					<ProductDeals
+						dealTitle="New year Deals"
+						deal={25}
+						imgx1={
+							"https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61ce9ZczoyL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+						}
+						imgx2={
+							"https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71R2WTsMF1L.__AC_SX300_SY300_QL70_FMwebp_.jpg "
+						}
+						imgx3={
+							"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/811IL7wDDWL.__AC_SY300_SX300_QL70_FMwebp_.jpg"
+						}
+						imgx4={
+							"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51DOzlkiBTL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+						}
 					/>
-					<Product
-						id={111}
-						title="HP 15.6” HD Student Laptop, Intel Pentium Silver N5030, 8GB RAM, 256GB PCIe SSD, Intel UHD ..."
-						image={image1a}
-						price={399.99}
-						rating={4}
-						quantity={1}
+					<SingleDeal
+						dealTitle="Top Deals"
+						deal={15}
+						imgx1={
+							"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/41WDKPdYaFL._AC_SY230_.jpg"
+						}
 					/>
-					<Product
-						id={2}
-						title="Apple iPad Air 10.5-inch (3rd Gen) Tablet A2152 (Wi-Fi Only) - 64GB / Space Gray (Renewed)"
-						image={image2}
-						price={89.99}
-						rating={4}
-						quantity={1}
+					<ProductDeals
+						dealTitle="Holiday Deals"
+						deal={20}
+						imgx1={
+							"https://m.media-amazon.com/images/I/61ZtqtvoD2L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+						}
+						imgx2={
+							"https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61Kf+coz5uL._AC_SY300_SX300_.jpg "
+						}
+						imgx3={
+							"https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61vJtKbAssL.__AC_SX300_SY300_QL70_FMwebp_.jpg "
+						}
+						imgx4={
+							"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71Ejp4aG40L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+						}
 					/>
-				</div>
-				<div className="home__row">
-					<Product
-						id={3}
-						title="Apple Watch Series 6 (GPS, 44mm) - Blue Aluminum Case with Deep Navy Sport Band (Renewed)"
-						image={image3}
-						price={219.99}
-						rating={2}
-						quantity={1}
-					/>
-					<Product
-						id={4}
-						title="Wireless Earbuds Bluetooth Headphones 60H Playtime Ear Buds with LED Power Display Charging Case Earphones in-Ear Earbud ..."
-						image={image4}
-						price={199.99}
-						rating={3}
-						quantity={1}
-					/>
-					<Product
-						id={5}
-						title="BENGOO G9000 Stereo Gaming Headset for PS4 PC Xbox One PS5 Controller, Soft Memory Earmuffs (Blue)"
-						image={image5}
-						price={49.99}
-						rating={4}
-						quantity={1}
-					/>
-				</div>
-				<div className="home__row">
-					<Product
-						id={6}
-						title="SAMSUNG 49 Odyssey Neo G9 Series G95NA 4K UHD Curved Gaming Monitor, 240Hz, 1ms, Mini LED Display, G-Sync and FreeSync Premium Pro, LS49AG952NNXZA,..."
-						image={image6}
-						price={1119.99}
-						rating={5}
-						quantity={1}
+					<SingleDeal
+						dealTitle="New Deals"
+						deal={10}
+						imgx1={
+							"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61UUQIBqMVL._AC_SL1500_.jpg"
+						}
 					/>
 				</div>
 				<div className="home__row">
@@ -141,6 +129,70 @@ function Home() {
 						quantity={1}
 					/>
 				</div>
+				<div className="home__row">
+					<Product
+						id={1}
+						title="Fccabin Adjustable Laptop Stand for Desk, Ergonomic Aluminum Laptop Riser for..."
+						image={image1}
+						price={26.99}
+						rating={5}
+						quantity={1}
+					/>
+					<Product
+						id={111}
+						title="HP 15.6” HD Student Laptop, Intel Pentium Silver N5030, 8GB RAM, 256GB PCIe SSD, Intel UHD ..."
+						image={image1a}
+						price={399.99}
+						rating={4}
+						quantity={1}
+					/>
+					<Product
+						id={2}
+						title="Apple iPad Air 10.5-inch (3rd Gen) Tablet A2152 (Wi-Fi Only) - 64GB / Space Gray (Renewed)"
+						image={image2}
+						price={89.99}
+						rating={4}
+						quantity={1}
+					/>
+				</div>
+
+				<div className="home__row">
+					<Product
+						id={6}
+						title="SAMSUNG 49 Odyssey Neo G9 Series G95NA 4K UHD Curved Gaming Monitor, 240Hz, 1ms, Mini LED Display, G-Sync and FreeSync Premium Pro, LS49AG952NNXZA,..."
+						image={image6}
+						price={1119.99}
+						rating={5}
+						quantity={1}
+					/>
+				</div>
+				<div className="home__row">
+					<Product
+						id={3}
+						title="Apple Watch Series 6 (GPS, 44mm) - Blue Aluminum Case with Deep Navy Sport Band (Renewed)"
+						image={image3}
+						price={219.99}
+						rating={2}
+						quantity={1}
+					/>
+					<Product
+						id={4}
+						title="Wireless Earbuds Bluetooth Headphones 60H Playtime Ear Buds with LED Power Display Charging Case Earphones in-Ear Earbud ..."
+						image={image4}
+						price={199.99}
+						rating={3}
+						quantity={1}
+					/>
+					<Product
+						id={5}
+						title="BENGOO G9000 Stereo Gaming Headset for PS4 PC Xbox One PS5 Controller, Soft Memory Earmuffs (Blue)"
+						image={image5}
+						price={49.99}
+						rating={4}
+						quantity={1}
+					/>
+				</div>
+
 				{/* for small products--scrollable */}
 				<h3 className="view_more">
 					Customers who viewed items in your browsing history also viewed
