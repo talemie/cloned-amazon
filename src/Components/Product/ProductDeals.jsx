@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function ProductDeals({ dealTitle, deal, imgx1,imgx2,imgx3,imgx4 }) {
 	return (
 		<div className="product__dealsWrapper ">
-			<h5>{dealTitle}</h5>
+			<h5 className="text-center">{dealTitle}</h5>
 			<div className="product__deals">
 				<div className="product__dealsRow">
 					<div className="deal">

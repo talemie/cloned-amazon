@@ -52,7 +52,7 @@ function CheckoutProduct({
 				</div>
 				<p className="checkoutProduct__price">
 					<small>$</small>
-					<strong>{price}</strong>
+					<strong>{price} { quantity>1&& `(Qty: ${quantity}, Sub total: ${(price*quantity).toFixed(2)})`}</strong>
 				</p>
 				{!hideButton && (
 					<>

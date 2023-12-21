@@ -42,9 +42,9 @@ export const productList = [
 	{
 		id: 15,
 		title:
-			"LG 27 Ultragear™ OLED QHD Gaming Monitor with 240Hz .03ms GtG & nVIDIA® G-SYNC® Compatible,Black ",
+			"Iphone 13 pro max with 240Hz .03ms GtG & nVIDIA® G-SYNC® Compatible,Black ",
 		image:
-			"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61oVYpKCOIL._AC_UF894,1000_QL80_FMwebp_.jpg",
+			"https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61p8cKPFJGL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
 		price: 899.99,
 		rating: 5,
 		quantity: 1,
@@ -141,9 +141,9 @@ export const productList = [
 	{
 		id: 25,
 		title:
-			"Ecolution Patented Micro-Pop Microwave Popcorn Popper with Temperature Safe Glass, 3-in-1 Lid Measures Kernels and Melts Butter, Made Without BPA, Dishwasher Safe, 1.5-Quart, Red",
+			"Ecolution Patented Popper with Temperature Safe Glass, 3-in-1 Lid Measures Kernels and Melts Butter, Made Without BPA, Dishwasher Safe, 1.5-Quart, Red",
 		image:
-			"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/81aTLT1IstL._AC_SL1500_.jpg",
+			"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71G9a1iSpHL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
 		price: 15.99,
 		rating: 3,
 		quantity: 1,
