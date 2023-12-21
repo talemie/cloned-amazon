@@ -49,7 +49,7 @@ function Home() {
 				/> */}
 				<div className="home__row home__dealRows">
 					<ProductDeals
-						dealTitle="New year Deals"
+						dealTitle="Holiday Deals"
 						deal={25}
 						imgx1={
 							"https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61ce9ZczoyL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
@@ -72,7 +72,7 @@ function Home() {
 						}
 					/>
 					<ProductDeals
-						dealTitle="Holiday Deals"
+						dealTitle="Special Deals"
 						deal={20}
 						imgx1={
 							"https://m.media-amazon.com/images/I/61ZtqtvoD2L.__AC_SX300_SY300_QL70_FMwebp_.jpg"

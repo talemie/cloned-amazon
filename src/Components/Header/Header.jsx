@@ -27,21 +27,23 @@ function Header() {
 						alt=""
 					/>
 				</Link>
-				<div className="header__itemsBorder header__option">
-					<span className="header__optionLineOne mx-4 px-1">
-						Delivering to Chicago, 60607
-					</span>
-					<span className="header__optionLineTwo">
-						<LocationOnIcon /> Update Location
-					</span>
-				</div>
+				<Link to='#'>
+					<div className="header__itemsBorder header__option">
+						<span className="header__optionLineOne mx-4 px-1">
+							Delivering to Chicago, 60607
+						</span>
+						<span className="header__optionLineTwo">
+							<LocationOnIcon /> Update Location
+						</span>
+					</div>
+				</Link>
 
 				<div className="header__search">
 					<SearchDropDown className="search_icon" />
 					<input
 						className="header__searchInput"
 						type="text"
-						placeholder="This is Not an Official website!!!"
+						placeholder=""
 					/>
 					<SearchIcon className="header__searchIcon" />
 				</div>
