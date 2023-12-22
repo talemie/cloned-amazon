@@ -29,6 +29,13 @@ function HomeCarsoul() {
 							alt="..."
 						/>
 					</div>
+					<div className="carousel-item">
+						<img
+							src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71LeWs1P1JL._SX3000_.jpg"
+							className="d-block w-100"
+							alt="..."
+						/>
+					</div>
 				</div>
 				<button
 					className="carousel-control-prev"
