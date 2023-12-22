@@ -52,12 +52,12 @@ function CheckoutProduct({
 				</div>
 				<p className="checkoutProduct__price">
 					<small>$</small>
-					<strong>{price}</strong>
-					<p>
+					<strong>{price}</strong> <br />
+					<em>
 						{quantity > 1 &&
 							hideButton &&
 							`(Qty: ${quantity}, Sub total: ${(price * quantity).toFixed(2)})`}
-					</p>
+					</em>
 				</p>
 				{!hideButton && (
 					<>
