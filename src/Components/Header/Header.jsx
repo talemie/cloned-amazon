@@ -27,7 +27,7 @@ function Header() {
 						alt=""
 					/>
 				</Link>
-				<Link to='#'>
+				<Link to="#">
 					<div className="header__itemsBorder header__option">
 						<span className="header__optionLineOne mx-4 px-1">
 							Delivering to Chicago, 60607
@@ -40,22 +40,19 @@ function Header() {
 
 				<div className="header__search">
 					<SearchDropDown className="search_icon" />
-					<input
-						className="header__searchInput"
-						type="text"
-						placeholder=""
-					/>
+					<input className="header__searchInput" type="text" placeholder="" />
 					<SearchIcon className="header__searchIcon" />
 				</div>
 				<div className="header__nav">
-					<div className="country__flag header__option">
+					<div className="country__flag header__option header__itemsBorder">
 						<span className="header__optionLineOne">
-							<img className="flag"
-								src="https://t3.ftcdn.net/jpg/05/43/00/48/240_F_543004860_AiMa6Qr8ub2khwxduNxWg8R9bpYTauW4.jpg"
+							<img
+								className="flag"
+								src="/usa_flag-2.png"
 								alt=""
 							/>
 						</span>
-						<span className="header__optionLineTwo">EN</span>
+						<span className="header__optionLineTwo"> EN</span>
 					</div>
 					<Link to={!user && "/login"} className="header__itemsBorder">
 						<div onClick={handleAuthentication} className="header__option">

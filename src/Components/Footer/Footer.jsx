@@ -5,7 +5,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 function Footer() {
 	const takeMeTop = () => {
 		window.scrollTo(0, 0);
-	}
+	};
 	return (
 		<>
 			<div className="back_top" onClick={takeMeTop}>
@@ -151,17 +151,12 @@ function Footer() {
 						</Link>
 						<div className="footer__langWrapper">
 							<div className="footer__lang">
-								{" "}
 								<LanguageIcon /> English
 							</div>
 							<div className="footer__lang">
-								United States{" "}
+								United States
 								<span>
-									<img
-										className="flag_footer"
-										src="https://t3.ftcdn.net/jpg/05/43/00/48/240_F_543004860_AiMa6Qr8ub2khwxduNxWg8R9bpYTauW4.jpg"
-										alt=""
-									/>
+									<img className="flag_footer" src="/usa_flag-2.png" alt="" />
 								</span>
 							</div>
 						</div>

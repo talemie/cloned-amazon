@@ -68,11 +68,11 @@ function Payment() {
 			setError(null)
 			setProcessing(false)
 
+			navigate('/orders')
 			dispatch({
 				type: "EMPTY_BASKET",
 			});
 
-			navigate('/orders')
 		}).catch((error)=>console.log(error.message))
 	}
 

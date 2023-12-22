@@ -98,6 +98,7 @@
  }
  .header__itemsBorder:hover{
     border: 1px solid white;
+    cursor: pointer;
  }
  .flag{
     max-width: 20px;
