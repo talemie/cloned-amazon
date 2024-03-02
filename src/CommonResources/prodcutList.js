@@ -33,8 +33,7 @@ export const productList = [
 		id: 14,
 		title:
 			"Owala Harry Potter FreeSip Insulated Stainless Steel Water Bottle with Straw, BPA-Free Sports Water Bottle, Great for Travel, 24 Oz, Ravenclaw ",
-		image:
-			"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/41L-kH-Q3mL._AC_SY879_.jpg",
+		image: "https://m.media-amazon.com/images/I/41rGImbFLjS._AC_UL320_.jpg",
 		price: 27.99,
 		rating: 4,
 		quantity: 1,
@@ -43,8 +42,7 @@ export const productList = [
 		id: 15,
 		title:
 			"Iphone 13 pro max with 240Hz .03ms GtG & nVIDIA® G-SYNC® Compatible,Black ",
-		image:
-			"https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61p8cKPFJGL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+		image: "https://m.media-amazon.com/images/I/51UuPZLMaCL._AC_UY218_.jpg",
 		price: 899.99,
 		rating: 5,
 		quantity: 1,
@@ -53,8 +51,7 @@ export const productList = [
 		id: 16,
 		title:
 			"Hamilton Beach Stack & Snap Food Processor and Vegetable Chopper, BPA Free, Stainless Steel Blades, 14 Cup + 4-Cup Mini Bowls, 3-Speed 500 Watt Motor, Black (70585)",
-		image:
-			"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/719hcFL5ZJL._AC_SL1500_.jpg",
+		image: "https://m.media-amazon.com/images/I/81y3HTZHzKL._AC_UY218_.jpg",
 		price: 199.99,
 		rating: 3,
 		quantity: 1,
@@ -83,8 +80,7 @@ export const productList = [
 		id: 19,
 		title:
 			"Yankee Candle Balsam & Cedar Scented, Classic 22oz Large Jar Single Wick Candle, Over 110 Hours of Burn Time | Holiday Gifts for All",
-		image:
-			"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/910lSrQ2YTL._AC_SL1500_.jpg",
+		image: "https://m.media-amazon.com/images/I/910lSrQ2YTL._AC_UL320_.jpg",
 		price: 29.99,
 		rating: 2,
 		quantity: 1,
@@ -93,8 +89,7 @@ export const productList = [
 		id: 20,
 		title:
 			"Saucemoto Dip Clip | An in-car sauce holder for ketchup and dipping sauces. As seen on Shark Tank (2 Pack, Black)",
-		image:
-			"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/7115AWGe76L._AC_SL1500_.jpg",
+		image: "https://m.media-amazon.com/images/I/71QZ7QW7MEL._AC_UL320_.jpg",
 		price: 19.99,
 		rating: 2,
 		quantity: 1,
@@ -112,8 +107,7 @@ export const productList = [
 	{
 		id: 22,
 		title: "CamelBak Carry Cap BPA Free Water Bottle with Tritan Renew",
-		image:
-			"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61tdld7Fg5L._AC_SL1500_.jpg",
+		image: "https://m.media-amazon.com/images/I/61Mogbc9YrL._AC_UL320_.jpg",
 		price: 19.99,
 		rating: 4,
 		quantity: 1,
@@ -132,8 +126,7 @@ export const productList = [
 		id: 24,
 		title:
 			"Hamilton Beach Stack & Snap Food Processor and Vegetable Chopper, BPA Free, Stainless Steel Blades, 14 Cup + 4-Cup Mini Bowls, 3-Speed 500 Watt Motor, Black (70585)",
-		image:
-			"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/719hcFL5ZJL._AC_SL1500_.jpg",
+		image: "https://m.media-amazon.com/images/I/81y3HTZHzKL._AC_UY218_.jpg",
 		price: 199.99,
 		rating: 3,
 		quantity: 1,
@@ -142,8 +135,7 @@ export const productList = [
 		id: 25,
 		title:
 			"Ecolution Patented Popper with Temperature Safe Glass, 3-in-1 Lid Measures Kernels and Melts Butter, Made Without BPA, Dishwasher Safe, 1.5-Quart, Red",
-		image:
-			"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71G9a1iSpHL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+		image: "https://m.media-amazon.com/images/I/6131PCILz1L._AC_UY218_.jpg",
 		price: 15.99,
 		rating: 3,
 		quantity: 1,

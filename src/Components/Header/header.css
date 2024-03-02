@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     /* background-color: #131921; */
-    background-color: #00453e;
+    background-color: #131921;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -86,14 +86,14 @@
  }
  /* delivery__location */
  .delivery__location{
-    border: 1px solid #00453e;
+    border: 1px solid #131921;
  }
  .delivery__location:hover{
     border: 1px solid white;
     cursor: pointer;
  }
  .header__itemsBorder{
-    border: 1px solid #00453e;
+    border: 1px solid #131921;
     padding: 2px;
  }
  .header__itemsBorder:hover{
