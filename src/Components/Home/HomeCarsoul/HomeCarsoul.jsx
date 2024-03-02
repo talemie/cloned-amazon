@@ -10,12 +10,12 @@ function HomeCarsoul() {
 				<div className="carousel-inner">
 					<div className="carousel-item active">
 						<img
-							src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/7191th9dBnL._SX3000_.jpg"
+							src="https://m.media-amazon.com/images/I/61VcT0BGcrL._SX3000_.jpg"
 							className="d-block w-100"
 							alt="..."
 						/>
 					</div>
-					<div className="carousel-item">
+					{/* <div className="carousel-item">
 						<img
 							src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
 							className="d-block w-100"
@@ -35,7 +35,7 @@ function HomeCarsoul() {
 							className="d-block w-100"
 							alt="..."
 						/>
-					</div>
+					</div> */}
 				</div>
 				<button
 					className="carousel-control-prev"

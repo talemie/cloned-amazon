@@ -1,6 +1,6 @@
 .sub__header{
     /* background-color: #293647; */
-    background-color: #195851;
+    background-color: #1a2533;
     color: white;
     display: flex;
     padding: 5px;
@@ -10,7 +10,7 @@
 }
 .all__list{
      color: white;
-      border: 1px solid #195851;
+      border: 1px solid #1a2533;
       padding: 0 3px;
 }
  .all__list:hover{
@@ -26,7 +26,7 @@
 }
 .lists div{
 color: white;
-border: 1px solid #195851;
+border: 1px solid #1a2533;
 padding: 5px;
 }
 .lists div:hover{
